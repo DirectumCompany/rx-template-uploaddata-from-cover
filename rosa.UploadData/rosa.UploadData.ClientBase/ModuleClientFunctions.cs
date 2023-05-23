@@ -259,7 +259,6 @@ namespace rosa.UploadData.Client
           {
             jobTitle.Name = range.Cell(1,1).Value.ToString();
             jobTitle.Department = range.Cell(1,2).Value.ToString();
-            jobTitle.DepartmentCode = range.Cell(1,3).Value.ToString();
           }
           catch (Exception ex)
           {
@@ -281,10 +280,9 @@ namespace rosa.UploadData.Client
     private void ShowJobTitlesLoaderReport(List<Structures.Module.JobTitle> jobTitles)
     {
       var report = Reports.GetJobTitlesLoaderErrorReport();
-      var errorText = string.Join(";", jobTitles.Select(x => string.Format("{0}|{1}|{2}|{3}",
+      var errorText = string.Join(";", jobTitles.Select(x => string.Format("{0}|{1}|{2}",
                                                                            x.Name,
                                                                            x.Department,
-                                                                           x.DepartmentCode,
                                                                            x.Error)).ToArray());
       report.LoaderErrorsStructure = errorText;
       report.Open();
@@ -527,8 +525,6 @@ namespace rosa.UploadData.Client
             employee.Phone = range.Cell(1,7).Value.ToString();
             employee.Email = range.Cell(1,8).Value.ToString();
             employee.Description = range.Cell(1,9).Value.ToString();
-            employee.JabberId = range.Cell(1,10).Value.ToString();
-            employee.DepartmentCode = range.Cell(1,11).Value.ToString();
           }
           catch (Exception ex)
           {
@@ -550,7 +546,7 @@ namespace rosa.UploadData.Client
     private void ShowEmployeesLoaderReport(List<Structures.Module.Employee> employees)
     {
       var report = Reports.GetEmployeesLoaderErrorReport();
-      var errorText = string.Join(";", employees.Select(x => string.Format("{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}",
+      var errorText = string.Join(";", employees.Select(x => string.Format("{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}",
                                                                            x.Person,
                                                                            x.Login,
                                                                            x.BusinessUnit,
@@ -560,8 +556,6 @@ namespace rosa.UploadData.Client
                                                                            x.Phone,
                                                                            x.Email,
                                                                            x.Description,
-                                                                           x.JabberId,
-                                                                           x.DepartmentCode,
                                                                            x.Error)).ToArray());
       report.LoaderErrorsStructure = errorText;
       report.Open();
@@ -629,7 +623,7 @@ namespace rosa.UploadData.Client
     private void ShowLoginsLoaderReport(List<Structures.Module.Login> logins)
     {
       var report = Reports.GetLoginsLoaderErrorReport();
-      var errorText = string.Join(";", logins.Select(x => string.Format("{0}|{1}|{2}",
+      var errorText = string.Join(";", logins.Select(x => string.Format("{0}|{1}",
                                                                         x.Name,
                                                                         x.Error)).ToArray());
       report.LoaderErrorsStructure = errorText;

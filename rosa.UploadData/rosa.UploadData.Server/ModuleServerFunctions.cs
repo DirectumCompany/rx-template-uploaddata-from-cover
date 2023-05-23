@@ -353,7 +353,7 @@ namespace rosa.UploadData.Server
       {
         try
         {
-          var record = GetJobTitleRecord(jobTitle.Name, jobTitle.Department, jobTitle.DepartmentCode);
+          var record = GetJobTitleRecord(jobTitle.Name, jobTitle.Department);
           if (record == null)
             record = JobTitles.Create();
           record.Name = jobTitle.Name;
@@ -374,18 +374,15 @@ namespace rosa.UploadData.Server
     /// <param name="name">Наименование.</param>
     /// <param name="department">Подразделение.</param>
     /// <returns>Запись справочника Должности.</returns>
-    public IJobTitle GetJobTitleRecord(string name, string department, string departmentCode)
+    public IJobTitle GetJobTitleRecord(string name, string department)
     {
       if (string.IsNullOrEmpty(name))
         return null;
       
       var jobTitles = JobTitles.GetAll(x => x.Name == name && x.Status == Sungero.CoreEntities.DatabookEntry.Status.Active);
       IJobTitle jobTitle = null;
-      if (!string.IsNullOrEmpty(departmentCode))
-        jobTitle = jobTitles.Where(x => x.Department != null && x.Department.Code == departmentCode).FirstOrDefault();
-      else
-        if (!string.IsNullOrEmpty(department))
-          jobTitle = jobTitles.Where(x => x.Department != null && x.Department.Name == department).FirstOrDefault();
+      if (!string.IsNullOrEmpty(department))
+        jobTitle = jobTitles.Where(x => x.Department.Name == department).FirstOrDefault();
       if (jobTitle == null)
         jobTitle = jobTitles.FirstOrDefault();
       
@@ -721,7 +718,7 @@ namespace rosa.UploadData.Server
     /// <summary>
     /// Получить запись справочника Подразделения.
     /// </summary>
-    /// <param name="name">наименование.</param>
+    /// <param name="name">Наименование.</param>
     /// <param name="businessUnit">Наша организация.</param>
     /// <returns>Запись справочника Подразделения.</returns>
     public IDepartment GetDepartmentRecord(string name, string businessUnit)
@@ -767,7 +764,7 @@ namespace rosa.UploadData.Server
 
           if (!string.IsNullOrEmpty(employee.JobTitle))
           {
-            record.JobTitle = GetJobTitleRecord(employee.JobTitle, employee.Department, employee.DepartmentCode);
+            record.JobTitle = GetJobTitleRecord(employee.JobTitle, employee.Department);
             if (record.JobTitle == null)
               throw AppliedCodeException.Create(Resources.NotFoundJobTitleExceptionTextFormat(employee.JobTitle, employee.Department));
           }
@@ -780,11 +777,12 @@ namespace rosa.UploadData.Server
             else
               throw AppliedCodeException.Create(Sungero.Parties.Resources.WrongEmailFormat);
           }
-          record.NeedNotifyExpiredAssignments = false;
-          record.NeedNotifyNewAssignments = false;
-          record.NeedNotifyAssignmentsSummary = false;
+          else
+          {
+            record.NeedNotifyExpiredAssignments = false;
+            record.NeedNotifyNewAssignments = false;
+          }
           record.Description = employee.Description;
-          //GD.MainSolution.Employees.As(record).JabberIdGD = employee.JabberId;
           record.Save();
         }
         catch (Exception ex)
@@ -839,6 +837,7 @@ namespace rosa.UploadData.Server
     /// Создать или обновить записи справочника Учетные записи.
     /// </summary>
     /// <param name="logins">Список учетных записей.</param>
+    /// <returns>Структура с учетными записями.</returns>
     [Remote]
     public List<Structures.Module.Login> CreateOrUpdateLogins(List<Structures.Module.Login> logins)
     {
@@ -848,9 +847,11 @@ namespace rosa.UploadData.Server
         {
           var record = GetLoginRecord(login.Name);
           if (record == null)
-            record = Logins.Create();
-          record.LoginName = login.Name;
-          record.TypeAuthentication = Sungero.CoreEntities.Login.TypeAuthentication.Windows;
+          {
+            Sungero.Company.PublicFunctions.Module.CreateLogin(login.Name, Constants.Module.PasswordDefault);
+            record = GetLoginRecord(login.Name);
+          }
+          record.NeedChangePassword = true;
           record.Save();
         }
         catch (Exception ex)
