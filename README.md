@@ -1,4 +1,4 @@
-# rx-template-uploaddata-from-cover
+# rx-template-upload-data-ui
 Репозиторий с шаблоном разработки «Загрузка данных из xlsx-файлов с обложки».
 
 Шаблон разработан партнером "РосА".
