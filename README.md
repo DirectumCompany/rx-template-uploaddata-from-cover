@@ -1,5 +1,5 @@
 # rx-template-uploaddata-from-cover
-Репозиторий с шаблоном разработки «Импорт данных с обложки модуля».
+Репозиторий с шаблоном разработки «Загрузка данных из xlsx-файлов с обложки».
 
 Шаблон разработан партнером "РосА".
 
@@ -38,7 +38,7 @@
 ![image](https://github.com/DirectumCompany/rx-util-uploaddata-from-cover/assets/87016932/01146610-7894-4e88-9939-748e1688cc36)
 
 ### Шаблоны для загрузки записей справочников (кроме шаблона для загрузки населенных пунктов)
-Шаблоны можно найти в папке [Шаблоны](https://github.com/DirectumCompany/rx-template-uploaddata-from-cover/tree/main/Template).
+Шаблоны можно найти в папке [Шаблоны](https://github.com/DirectumCompany/rx-template-upload-data-ui/tree/main/Template).
 
 ### Порядок загрузки населенных пунктов из ФИАС (ГАР).
 1.	По ссылке https://fias.nalog.ru/Updates на вкладке ГАР БД ФИАС необходимо выполнить экспорт последней полной версии XML, находящейся в правом столбце, в формате .zip.
@@ -50,7 +50,9 @@
 4. После перемещения документ необходимо открыть с помощью Excel, выбрав способ открытия файла XML-таблица.
 ![image](https://github.com/DirectumCompany/rx-util-uploaddata-from-cover/assets/87016932/37a2ca81-41ab-4d05-bca4-f4a99543223f)
 5.	В сформировавшейся таблице в столбце Level выбираются уровни:
+  
   • 5 - город;
+  
   • 6 - населенный пункт.
   
 <b>Примечания</b>. Отмеченные уровни импортируются в систему. Остальные уровни с шаблона необходимо удалить. Если шаблон большой, то рекомендуется разбить его на несколько примерно по 5000 записей. данное ограничение связано с там, что для веб-клиента в системе Directum RX стоит таймаут - 2 мин.
@@ -83,7 +85,7 @@
 Для работы требуется установленный Directum RX версии 4.4 и выше.
 
 Установка для ознакомления
-1. Склонировать репозиторий https://github.com/DirectumCompany/rx-template-uploaddata-from-cover.git в папку.
+1. Склонировать репозиторий https://github.com/DirectumCompany/rx-template-upload-data-ui.git в папку.
 2. Подключить к среде разработки Directum RX как рабочий слой.
 
 ### Установка для использования на проекте
@@ -92,13 +94,13 @@
 
 A. Подключение на базовый слой.
 Вариант не рекомендуется, так как при выходе версии шаблона разработки не гарантируется обратная совместимость.
-1. Склонировать репозиторий https://github.com/DirectumCompany/rx-template-uploaddata-from-cover.git в папку.
+1. Склонировать репозиторий https://github.com/DirectumCompany/rx-template-upload-data-ui.git в папку.
 2. Указать в _ConfigSettings.xml DDS:
 ```xml
 <block name="REPOSITORIES">
   <repository folderName="Base" solutionType="Base" url="" /> 
   <repository folderName="<Папка из п.1>" solutionType="Base" 
-     url="https://github.com/DirectumCompany/rx-template-uploaddata-from-cover.git" />
+     url="https://github.com/DirectumCompany/rx-template-upload-data-ui.git" />
   <repository folderName="<Папка для рабочего слоя>" solutionType="Work" 
      url="<Адрес репозитория для рабочего слоя>" />
 </block>
@@ -107,7 +109,7 @@ A. Подключение на базовый слой.
 B. Копирование репозитория в систему контроля версий.
 Рекомендуемый вариант для проектов внедрения.
 1. В системе контроля версий с поддержкой git создать новый репозиторий.
-2. Склонировать репозиторий https://github.com/DirectumCompany/rx-template-uploaddata-from-cover.git в папку с ключом --mirror.
+2. Склонировать репозиторий https://github.com/DirectumCompany/rx-template-upload-data-uir.git в папку с ключом --mirror.
 3. Перейти в папку из п. 2.
 4. Импортировать клонированный репозиторий в систему контроля версий командой:
 git push –mirror <Адрес репозитория из п. 1>
