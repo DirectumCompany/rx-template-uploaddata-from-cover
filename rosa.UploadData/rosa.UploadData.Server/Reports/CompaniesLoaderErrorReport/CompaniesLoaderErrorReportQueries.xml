@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="SelectFromTempTable">
+    <mssql><![CDATA[select *
+from Settings_Reports_CompaniesLoaderError
+where ReportSessionId = @ReportSessionId]]></mssql>
+    <postgres><![CDATA[select *
+from Settings_Reports_CompaniesLoaderError
+where ReportSessionId = @ReportSessionId]]></postgres>
+  </query>
+  <query key="CreateSourceTable">
+    <mssql><![CDATA[create table {0}
+([ReportSessionId] varchar(256) NOT NULL,
+ [Name] nvarchar(max) NULL,
+ [LegalName] nvarchar(max) NULL,
+ [HeadCompany] nvarchar(max) NULL,
+ [Nonresident] nvarchar(max) NULL,
+ [TIN] nvarchar(max) NULL,
+ [TRRC] nvarchar(max) NULL,
+ [PSRN] nvarchar(max) NULL,
+ [NCEO] nvarchar(max) NULL,
+ [NCEA] nvarchar(max) NULL,
+ [City] nvarchar(max) NULL,
+ [Region] nvarchar(max) NULL,
+ [LegalAddress] nvarchar(max) NULL,
+ [PostalAddress] nvarchar(max) NULL,
+ [Phones] nvarchar(max) NULL,
+ [Email] nvarchar(max) NULL,
+ [Homepage] nvarchar(max) NULL,
+ [Note] nvarchar(max) NULL,
+ [Account] nvarchar(max) NULL,
+ [Bank] nvarchar(max) NULL,   
+ [Error] nvarchar(max) NULL)]]></mssql>
+    <postgres><![CDATA[create table {0}
+(ReportSessionId citext NOT NULL,
+ Name citext NULL,
+ LegalName citext NULL,
+ HeadCompany citext NULL,
+ Nonresident citext NULL,
+ TIN citext NULL,
+ TRRC citext NULL,
+ PSRN citext NULL,
+ NCEO citext NULL,
+ NCEA citext NULL,
+ City citext NULL,
+ Region citext NULL,
+ LegalAddress citext NULL,
+ PostalAddress citext NULL,
+ Phones citext NULL,
+ Email citext NULL,
+ Homepage citext NULL,
+ Note citext NULL,
+ Account citext NULL,
+ Bank citext NULL,   
+ Error citext NULL)]]></postgres>
+  </query>
+</queries>

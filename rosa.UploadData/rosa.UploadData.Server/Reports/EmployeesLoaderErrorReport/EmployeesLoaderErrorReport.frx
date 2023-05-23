@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Core.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;Sungero.Domain.Shared&#13;&#10;Sungero.CoreEntities.Shared&#13;&#10;Sungero.Reporting.Shared&#13;&#10;CommonLibrary&#13;&#10;Sungero.Domain.Interfaces&#13;&#10;rosa.Settings.Shared&#13;&#10;rosa.Settings.Server" ReportInfo.CreatorVersion="2020.2.12.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+using Sungero.Domain.Shared;
+using Sungero.CoreEntities;
+using Sungero.Core;
+using Resources = rosa.Settings.Reports.Resources;
+
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+  }
+}
+  </ScriptText>
+  <Dictionary>
+    <SungeroSqlDataConnection Name="Sungero_Connection" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties" ConnectionStringExpression="[SungeroConnectionString]">
+      <TableDataSource Name="Table" Alias="LoaderErrors" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectFromTempTable}">
+        <Column Name="Person" DataType="System.String" PropName="Column"/>
+        <Column Name="Error" DataType="System.String" PropName="Column"/>
+        <Column Name="Department" DataType="System.String" PropName="Column"/>
+        <Column Name="JobTitle" DataType="System.String" PropName="Column1"/>
+        <Column Name="PersonnelNumber" DataType="System.String" PropName="Column2"/>
+        <Column Name="Phone" DataType="System.String" PropName="Column3"/>
+        <Column Name="Email" DataType="System.String" PropName="Column4"/>
+        <Column Name="Descriprion" DataType="System.String" PropName="Column5"/>
+        <Column Name="Login" DataType="System.String" PropName="Column"/>
+        <Column Name="BusinessUnit" DataType="System.String" PropName="Column"/>
+        <Column Name="JabberId" DataType="System.String" PropName="Column"/>
+        <Column Name="DepartmentCode" DataType="System.String" PropName="Column"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+    </SungeroSqlDataConnection>
+    <SungeroParameter Name="SungeroConnectionString" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties, DontShow" Id="a080acf9-86bf-498c-82bd-b2decb09f76a" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ReportSessionId" Id="fd8d354d-7206-4f6b-a4e9-e35391fc9c8e" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="LoaderErrorsStructure" Id="d94d6481-6035-47c5-bdf6-955915555e56" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+  </Dictionary>
+  <ReportPage Name="Page1" FirstPageSource="1" OtherPagesSource="1" Watermark.Font="Arial, 60pt" ExtraDesignWidth="true" UnlimitedWidth="true">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="18.9">
+      <TextObject Name="Text1" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Персона" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text2" Left="510.3" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Подразделение" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text3" Left="680.4" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Должность" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text4" Left="850.5" Width="113.4" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Табельный номер" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text9" Left="963.9" Width="122.85" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Рабочий телефон" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text10" Left="1086.75" Width="160.65" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Эл. почта" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text11" Left="1247.4" Width="179.55" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Примечание" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text24" Left="1644.3" Width="264.6" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Текст ошибки" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text31" Left="170.1" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Учетная запись" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text33" Left="340.2" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Наша организация" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text35" Left="1426.95" Width="113.4" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="JabberId" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text36" Left="1540.35" Width="103.95" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Код подразделения" Font="Segoe UI, 9pt"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="22.9" Width="718.2" Height="18.9" DataSource="Table">
+      <TextObject Name="Text5" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Person]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text6" Left="510.3" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Department]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text7" Left="680.4" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.JobTitle]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text8" Left="850.5" Width="113.4" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.PersonnelNumber]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text25" Left="963.9" Width="122.85" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Phone]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text26" Left="1086.75" Width="160.65" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Email]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text27" Left="1247.4" Width="179.55" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Descriprion]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text30" Left="1644.3" Width="264.6" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Error]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text32" Left="170.1" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Login]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text34" Left="340.2" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.BusinessUnit]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text37" Left="1426.95" Width="113.4" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.JabberId]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text38" Left="1540.35" Width="103.95" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.DepartmentCode]" Font="Segoe UI, 9pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>

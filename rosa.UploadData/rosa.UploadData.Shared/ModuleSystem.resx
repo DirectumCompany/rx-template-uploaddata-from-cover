@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Upload Data</value>
+  </data>
+  <data name="CoverTitle" xml:space="preserve">
+    <value>UploadData</value>
+  </data>
+  <data name="CoverGroup_Classifier" xml:space="preserve">
+    <value>Classifier</value>
+  </data>
+  <data name="CoverAction_LoadTopics" xml:space="preserve">
+    <value>Load Topics</value>
+  </data>
+  <data name="CoverDescription_LoadTopics" xml:space="preserve">
+    <value>Load Topics in classifier</value>
+  </data>
+  <data name="CoverAction_LoadSections" xml:space="preserve">
+    <value>Load Sections</value>
+  </data>
+  <data name="CoverDescription_LoadSections" xml:space="preserve">
+    <value>Load Sections in classifier</value>
+  </data>
+  <data name="CoverAction_LoadThemes" xml:space="preserve">
+    <value>Load Themes</value>
+  </data>
+  <data name="CoverDescription_LoadThemes" xml:space="preserve">
+    <value>Load Themes in classifier</value>
+  </data>
+  <data name="CoverAction_LoadQuestions" xml:space="preserve">
+    <value>Load Questions</value>
+  </data>
+  <data name="CoverDescription_LoadQuestions" xml:space="preserve">
+    <value>Load Questions in classifier</value>
+  </data>
+  <data name="CoverAction_LoadSubquestions" xml:space="preserve">
+    <value>Load Subquestions</value>
+  </data>
+  <data name="CoverDescription_LoadSubquestions" xml:space="preserve">
+    <value>Load Subquestions in classifier</value>
+  </data>
+  <data name="CoverDescription" xml:space="preserve">
+    <value>The module is intended for administration and configuration of modules</value>
+  </data>
+  <data name="CoverGroup_OrganizationalStructure" xml:space="preserve">
+    <value>Corporate Structure</value>
+  </data>
+  <data name="CoverAction_LoadJobTitle" xml:space="preserve">
+    <value>Load Job Titles</value>
+  </data>
+  <data name="CoverDescription_LoadJobTitle" xml:space="preserve">
+    <value>Load Job Titles from organizational structure</value>
+  </data>
+  <data name="CoverAction_LoadCompanies" xml:space="preserve">
+    <value>Load Companies</value>
+  </data>
+  <data name="CoverDescription_LoadCompanies" xml:space="preserve">
+    <value>Load Companies  from organizational structure</value>
+  </data>
+  <data name="CoverAction_LoadDeparrtment" xml:space="preserve">
+    <value>Load Deparrtments</value>
+  </data>
+  <data name="CoverDescription_LoadDeparrtment" xml:space="preserve">
+    <value>Load Deparrtments from organizational structure</value>
+  </data>
+  <data name="CoverAction_LoadPerson" xml:space="preserve">
+    <value>Load Persons</value>
+  </data>
+  <data name="CoverDescription_LoadPerson" xml:space="preserve">
+    <value>Load Person from organizational structure </value>
+  </data>
+  <data name="CoverAction_LoadBusinessUnit" xml:space="preserve">
+    <value>Load Business Unit</value>
+  </data>
+  <data name="CoverDescription_LoadBusinessUnit" xml:space="preserve">
+    <value>Load Business Unit from organizational structure </value>
+  </data>
+  <data name="CoverAction_LoadEmployee" xml:space="preserve">
+    <value>Load Employees</value>
+  </data>
+  <data name="CoverDescription_LoadEmployee" xml:space="preserve">
+    <value>Load Employees from organizational structure </value>
+  </data>
+  <data name="CoverAction_LoadLogin" xml:space="preserve">
+    <value>Load Login</value>
+  </data>
+  <data name="CoverDescription_LoadLogin" xml:space="preserve">
+    <value>Load Login from organizational structure</value>
+  </data>
+  <data name="CoverGroup_Cases" xml:space="preserve">
+    <value>Cases</value>
+  </data>
+  <data name="CoverAction_LoadCase" xml:space="preserve">
+    <value>Load case</value>
+  </data>
+  <data name="CoverDescription_LoadCase" xml:space="preserve">
+    <value>Load case from file</value>
+  </data>
+  <data name="CoverAction_LoadRetentionPeriod" xml:space="preserve">
+    <value>Load retention periods</value>
+  </data>
+  <data name="CoverDescription_LoadRetentionPeriod" xml:space="preserve">
+    <value>Load retention periods from file</value>
+  </data>
+  <data name="CoverTab_Tab" xml:space="preserve">
+    <value>Tab</value>
+  </data>
+  <data name="CoverAction_LoadCities" xml:space="preserve">
+    <value>Load Cities</value>
+  </data>
+  <data name="CoverDescription_LoadCities" xml:space="preserve">
+    <value>Download settlements</value>
+  </data>
+</root>

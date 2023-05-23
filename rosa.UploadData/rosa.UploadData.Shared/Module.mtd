@@ -1,0 +1,350 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "9f626c0b-5a5b-4e7b-950c-80745b6ed1db",
+  "Name": "UploadData",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "rosa.UploadData.Client",
+  "ClientBaseAssemblyName": "rosa.UploadData.ClientBase",
+  "ClientBaseNamespace": "rosa.UploadData.ClientBase",
+  "ClientNamespace": "rosa.UploadData.Client",
+  "Code": "UploadD",
+  "CompanyCode": "rosa",
+  "Cover": {
+    "NameGuid": "b9781eb8-c14f-478b-b8b5-6a6b5f7842d4",
+    "Actions": [
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "0cbe3a4b-23fb-499b-a138-9de3990dba8a",
+        "Name": "LoadLogin",
+        "FunctionName": "LoadLogins",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "0e1657cf-ec3b-4e25-92ec-2924d5349d5d",
+        "Name": "LoadDeparrtment",
+        "FunctionName": "LoadDepartments",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "PreviousItemGuid": "cb08b7c7-d6e8-43d6-a7f2-518f673bee5e"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "19206979-73e2-4bec-b403-617eea06c547",
+        "Name": "LoadCities",
+        "FunctionName": "LoadCities",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "PreviousItemGuid": "54f2cdc4-718c-47fa-a289-0c2ab17e1a93"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "226d41a3-4d97-445a-a53c-943c45938346",
+        "Name": "LoadQuestions",
+        "FunctionName": "LoadQuestionsClassifier",
+        "GroupId": "811eb44b-40ee-4f9f-8314-febb17edc0b4",
+        "PreviousItemGuid": "37e610fc-87f3-4675-8917-ec8352f35923"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "2cb9f01a-f480-4b98-973d-cf5e63452470",
+        "Name": "LoadRetentionPeriod",
+        "FunctionName": "LoadFileRetentionPeriod",
+        "GroupId": "d8a51d56-7ce2-4f17-8a1d-38d769b4a0e2"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "37e610fc-87f3-4675-8917-ec8352f35923",
+        "Name": "LoadTopics",
+        "FunctionName": "LoadTopicsClassifier",
+        "GroupId": "811eb44b-40ee-4f9f-8314-febb17edc0b4",
+        "PreviousItemGuid": "e960c814-02a2-40a8-95d5-ccf41b7552e2"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "54f2cdc4-718c-47fa-a289-0c2ab17e1a93",
+        "Name": "LoadEmployee",
+        "FunctionName": "LoadEmployees",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "PreviousItemGuid": "7d3a4ee4-ae1c-4c6c-a2c4-017581d3ad0f"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "63e71bcf-1deb-460c-9874-5a7732cf9a4a",
+        "Name": "LoadSubquestions",
+        "FunctionName": "LoadSubQuestionsClassifier",
+        "GroupId": "811eb44b-40ee-4f9f-8314-febb17edc0b4",
+        "PreviousItemGuid": "226d41a3-4d97-445a-a53c-943c45938346"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "6a9e1784-3862-43ae-875f-b72f75c8d427",
+        "Name": "LoadSections",
+        "FunctionName": "LoadSectionsClassifier",
+        "GroupId": "811eb44b-40ee-4f9f-8314-febb17edc0b4"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "7d3a4ee4-ae1c-4c6c-a2c4-017581d3ad0f",
+        "Name": "LoadJobTitle",
+        "FunctionName": "LoadJobTitles",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "PreviousItemGuid": "0e1657cf-ec3b-4e25-92ec-2924d5349d5d"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "99c2aa21-1787-4f49-a678-d573503a62a6",
+        "Name": "LoadCase",
+        "FunctionName": "LoadCaseFile",
+        "GroupId": "d8a51d56-7ce2-4f17-8a1d-38d769b4a0e2",
+        "PreviousItemGuid": "2cb9f01a-f480-4b98-973d-cf5e63452470"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "cb08b7c7-d6e8-43d6-a7f2-518f673bee5e",
+        "Name": "LoadBusinessUnit",
+        "FunctionName": "LoadBusinessUnits",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "PreviousItemGuid": "d7b7e8cc-39e3-44e9-8073-b277b97687bf"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "d7b7e8cc-39e3-44e9-8073-b277b97687bf",
+        "Name": "LoadCompanies",
+        "FunctionName": "LoadCompanies",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "PreviousItemGuid": "fe25fd20-d46a-47c9-a02c-ede55585b27e"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "e960c814-02a2-40a8-95d5-ccf41b7552e2",
+        "Name": "LoadThemes",
+        "FunctionName": "LoadThemesClassifier",
+        "GroupId": "811eb44b-40ee-4f9f-8314-febb17edc0b4",
+        "PreviousItemGuid": "6a9e1784-3862-43ae-875f-b72f75c8d427"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "fe25fd20-d46a-47c9-a02c-ede55585b27e",
+        "Name": "LoadPerson",
+        "FunctionName": "LoadPersons",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "PreviousItemGuid": "0cbe3a4b-23fb-499b-a138-9de3990dba8a"
+      }
+    ],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "3bdae08e-61c4-444f-9a58-3e4e90a8b9bd",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [
+      {
+        "NameGuid": "811eb44b-40ee-4f9f-8314-febb17edc0b4",
+        "Name": "Classifier",
+        "BackgroundPosition": "Stretch",
+        "IconName": "GroupIconClassifier_811eb44b40ee4f9f8314febb17edc0b4.png",
+        "TabId": "10a6cf62-299e-4852-ab84-7d30dea00aee"
+      },
+      {
+        "NameGuid": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "Name": "OrganizationalStructure",
+        "BackgroundPosition": "Stretch",
+        "IconName": "GroupIconOrganizationalStructure_231af21d79c74c9dab5cda34511778f4.png",
+        "PreviousItemGuid": "811eb44b-40ee-4f9f-8314-febb17edc0b4",
+        "TabId": "10a6cf62-299e-4852-ab84-7d30dea00aee"
+      },
+      {
+        "NameGuid": "d8a51d56-7ce2-4f17-8a1d-38d769b4a0e2",
+        "Name": "Cases",
+        "BackgroundPosition": "Stretch",
+        "IconName": "GroupIconCases_d8a51d567ce24f178a1d38d769b4a0e2.png",
+        "PreviousItemGuid": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "TabId": "10a6cf62-299e-4852-ab84-7d30dea00aee"
+      }
+    ],
+    "Header": {
+      "NameGuid": "a39c105d-eca9-4595-8d18-dbe9bd60acdc",
+      "BackgroundPosition": "Stretch"
+    },
+    "Tabs": [
+      {
+        "NameGuid": "10a6cf62-299e-4852-ab84-7d30dea00aee",
+        "Name": "Tab"
+      }
+    ]
+  },
+  "Dependencies": [
+    {
+      "Id": "6276e1dc-e333-41b3-a825-77e41c6f07ad",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    },
+    {
+      "Id": "011a7117-3db8-44ae-963a-74568896c47f",
+      "MaxVersion": "",
+      "MinVersion": "4.0.1.1"
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "6f93b648-9a9c-4315-bdd8-b4d0e77cbaab"
+    },
+    {
+      "ItemId": "374fabab-e508-457c-9249-9206dcf46432",
+      "PreviousItemId": "6f93b648-9a9c-4315-bdd8-b4d0e77cbaab"
+    },
+    {
+      "ItemId": "c0df38db-2c1a-4dd7-9750-811b325dc946",
+      "PreviousItemId": "374fabab-e508-457c-9249-9206dcf46432"
+    },
+    {
+      "ItemId": "f3f39dd1-e103-4474-9cdf-7e68cf383cb7",
+      "PreviousItemId": "c0df38db-2c1a-4dd7-9750-811b325dc946"
+    },
+    {
+      "ItemId": "fb18228d-e23c-4076-a82a-bbf8ec571a4e",
+      "PreviousItemId": "f3f39dd1-e103-4474-9cdf-7e68cf383cb7"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "62218e25-b17d-4224-8396-3ded02a19274",
+      "PreviousItemId": "fb18228d-e23c-4076-a82a-bbf8ec571a4e"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "6f2d3159-9952-404e-901e-ce6f78064401",
+      "PreviousItemId": "62218e25-b17d-4224-8396-3ded02a19274"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "ddda19da-a81f-4268-8758-89455eb8f40d",
+      "PreviousItemId": "6f2d3159-9952-404e-901e-ce6f78064401"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "2228de59-f5a8-4bef-bafa-88974baa98cc",
+      "PreviousItemId": "ddda19da-a81f-4268-8758-89455eb8f40d"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "d928ed8d-019b-452b-bc89-5007fb194de8",
+      "PreviousItemId": "2228de59-f5a8-4bef-bafa-88974baa98cc"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "6a8f112b-b6b8-4c4a-bd56-0de38dacaee5",
+      "PreviousItemId": "d928ed8d-019b-452b-bc89-5007fb194de8"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "8f998976-3666-4a5a-83d5-bf67d983a7cb",
+      "PreviousItemId": "6a8f112b-b6b8-4c4a-bd56-0de38dacaee5"
+    },
+    {
+      "ItemId": "e227cdc4-ce81-4e5a-a12f-92eb467c0407",
+      "PreviousItemId": "8f998976-3666-4a5a-83d5-bf67d983a7cb"
+    },
+    {
+      "ItemId": "2f5dd392-dbc7-41b9-b8ef-784a24ca8ff8",
+      "PreviousItemId": "e227cdc4-ce81-4e5a-a12f-92eb467c0407"
+    },
+    {
+      "ItemId": "307ebe22-010d-4e6d-9bd7-44fe603982e9",
+      "PreviousItemId": "2f5dd392-dbc7-41b9-b8ef-784a24ca8ff8"
+    },
+    {
+      "ItemId": "d60c9cdd-201a-4158-a061-93e6f462f1b4",
+      "PreviousItemId": "307ebe22-010d-4e6d-9bd7-44fe603982e9"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "rosa.UploadData",
+  "IsolatedAssemblyName": "rosa.UploadData.Isolated",
+  "IsolatedNamespace": "rosa.UploadData.Isolated",
+  "Libraries": [
+    {
+      "NameGuid": "f0294694-5182-4ef9-a7da-d73a1d5bb127",
+      "Name": "ClosedXML",
+      "Scope": "Both"
+    },
+    {
+      "NameGuid": "c7425342-3598-45d5-b23d-8583dfdfcd2d",
+      "Name": "InteropExcel",
+      "Scope": "Both"
+    }
+  ],
+  "Overridden": [
+    "IsVisible"
+  ],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "rosa.UploadData",
+  "ResourcesKeys": [
+    "FileSelectTitle",
+    "LoadTopicClassifierDialogTitle",
+    "LoadSectionsDialogTitle",
+    "LoadThemeClassifierDialogTitle",
+    "LoadQuestionClassifierDialogTitle",
+    "LoadSubquestionClassifierDialogTitle",
+    "EndOfLoadNotifyMessageText",
+    "LoadDepartmentDialogTitle",
+    "LoadBusinessUnitDialogTitle",
+    "LoadJobTitleDialogTitle",
+    "NotFoundSectionExceptionText",
+    "NotFoundTopicExceptionText",
+    "NotFoundThemeExceptionText",
+    "NotFoundQuestionExceptionText",
+    "NotFoundCompanyExceptionText",
+    "NotFoundRegionExceptionText",
+    "NotFoundCityExceptionText",
+    "NotFoundBankExceptionText",
+    "LoadPersonDialogTitle",
+    "NotFoundJobTitleExceptionText",
+    "NotFoundDepartmentExceptionText",
+    "NotFoundDepartmentWithoutBusinessUnitExceptionText",
+    "DuplicatePersonsTitleExceptionText",
+    "NotFoundBusinessUnitExceptionText",
+    "LoadEmployeeDialogTitle",
+    "NotFoundEmployeeExceptionText",
+    "FileExtensionMustBeXlsx",
+    "NotFoundLoginExceptionText",
+    "SelectFile",
+    "File",
+    "ResultFilePath",
+    "LoadComplete",
+    "ActionAvailableToAdministrators",
+    "FailedCreateReason",
+    "RetentionPeriodNotFound",
+    "SuccessfullyCreated",
+    "RecordExist",
+    "NotFoundRetentionPeriodExceptionText",
+    "LoadCaseFileDialogTitle",
+    "LoadFileRetentionPeriodDialogTitle",
+    "LoadCitiesDialogTitle",
+    "Country",
+    "Region",
+    "LoadMunArea",
+    "LoadSettlements"
+  ],
+  "ServerAssemblyName": "rosa.UploadData.Server",
+  "ServerNamespace": "rosa.UploadData.Server",
+  "SharedAssemblyName": "rosa.UploadData.Shared",
+  "SharedNamespace": "rosa.UploadData.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.39",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

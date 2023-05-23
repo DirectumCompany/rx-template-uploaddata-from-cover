@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FileSelectTitle" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="LoadTopicClassifierDialogTitle" xml:space="preserve">
+    <value>Load Topics</value>
+  </data>
+  <data name="LoadSectionsDialogTitle" xml:space="preserve">
+    <value>Load sections</value>
+  </data>
+  <data name="LoadThemeClassifierDialogTitle" xml:space="preserve">
+    <value>Load Theme</value>
+  </data>
+  <data name="LoadQuestionClassifierDialogTitle" xml:space="preserve">
+    <value>Load Questions</value>
+  </data>
+  <data name="LoadSubquestionClassifierDialogTitle" xml:space="preserve">
+    <value>Load Subquestions</value>
+  </data>
+  <data name="EndOfLoadNotifyMessageText" xml:space="preserve">
+    <value>Processed in total: {0}
+Of them with an error: {1}</value>
+  </data>
+  <data name="LoadDepartmentDialogTitle" xml:space="preserve">
+    <value>Load Departments</value>
+  </data>
+  <data name="LoadBusinessUnitDialogTitle" xml:space="preserve">
+    <value>Load companies</value>
+  </data>
+  <data name="LoadJobTitleDialogTitle" xml:space="preserve">
+    <value>Load Job title</value>
+  </data>
+  <data name="NotFoundSectionExceptionText" xml:space="preserve">
+    <value>The section of the classifier of hits with the code {0} was not found</value>
+  </data>
+  <data name="NotFoundTopicExceptionText" xml:space="preserve">
+    <value>The subject of the classifier of calls with the code {0} was not found</value>
+  </data>
+  <data name="NotFoundThemeExceptionText" xml:space="preserve">
+    <value>The topic of the classifier of hits with code {0} was not found</value>
+  </data>
+  <data name="NotFoundQuestionExceptionText" xml:space="preserve">
+    <value>The question of the classifier of hits with the code {0} was not found</value>
+  </data>
+  <data name="NotFoundCompanyExceptionText" xml:space="preserve">
+    <value>Organization with the name {0} was not found</value>
+  </data>
+  <data name="NotFoundRegionExceptionText" xml:space="preserve">
+    <value>Region with name {0} not found</value>
+  </data>
+  <data name="NotFoundCityExceptionText" xml:space="preserve">
+    <value>The settlement with the name {0} was not found</value>
+  </data>
+  <data name="NotFoundBankExceptionText" xml:space="preserve">
+    <value>Bank with name {0} not found</value>
+  </data>
+  <data name="LoadPersonDialogTitle" xml:space="preserve">
+    <value>Load persons</value>
+  </data>
+  <data name="NotFoundJobTitleExceptionText" xml:space="preserve">
+    <value>No job found with name {0} and department {1}</value>
+  </data>
+  <data name="NotFoundDepartmentExceptionText" xml:space="preserve">
+    <value>No department found with the name {0} and our organization {1}</value>
+  </data>
+  <data name="NotFoundDepartmentWithoutBusinessUnitExceptionText" xml:space="preserve">
+    <value>Department not found with name {0}</value>
+  </data>
+  <data name="DuplicatePersonsTitleExceptionText" xml:space="preserve">
+    <value>Duplicate persons were found by name {0}.</value>
+  </data>
+  <data name="NotFoundBusinessUnitExceptionText" xml:space="preserve">
+    <value>Our organization with the name {0} was not found</value>
+  </data>
+  <data name="LoadEmployeeDialogTitle" xml:space="preserve">
+    <value>Load employees</value>
+  </data>
+  <data name="NotFoundEmployeeExceptionText" xml:space="preserve">
+    <value>No employee found with the name {0}</value>
+  </data>
+  <data name="FileExtensionMustBeXlsx" xml:space="preserve">
+    <value>File extension must be .xlsx</value>
+  </data>
+  <data name="NotFoundLoginExceptionText" xml:space="preserve">
+    <value>Login not found with name {0}</value>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>Select file</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="ResultFilePath" xml:space="preserve">
+    <value>{0}\Download results {1}</value>
+  </data>
+  <data name="LoadComplete" xml:space="preserve">
+    <value>Loading is complete. The download results are written to a file on the desktop.</value>
+  </data>
+  <data name="ActionAvailableToAdministrators" xml:space="preserve">
+    <value>This action is available only to administrators.</value>
+  </data>
+  <data name="FailedCreateReason" xml:space="preserve">
+    <value>Failed to create record for reason: {0}</value>
+  </data>
+  <data name="RetentionPeriodNotFound" xml:space="preserve">
+    <value>Retention period not found.</value>
+  </data>
+  <data name="SuccessfullyCreated" xml:space="preserve">
+    <value>Successfully created</value>
+  </data>
+  <data name="RecordExist" xml:space="preserve">
+    <value>Record already exist</value>
+  </data>
+  <data name="NotFoundRetentionPeriodExceptionText" xml:space="preserve">
+    <value>The retention period with the name {0} was not found</value>
+  </data>
+  <data name="LoadCaseFileDialogTitle" xml:space="preserve">
+    <value>Load case file</value>
+  </data>
+  <data name="LoadFileRetentionPeriodDialogTitle" xml:space="preserve">
+    <value>Load file retention period</value>
+  </data>
+  <data name="LoadCitiesDialogTitle" xml:space="preserve">
+    <value>LoadCities</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="LoadMunArea" xml:space="preserve">
+    <value>Load Mun Area</value>
+  </data>
+  <data name="LoadSettlements" xml:space="preserve">
+    <value>Load Settlements</value>
+  </data>
+</root>
