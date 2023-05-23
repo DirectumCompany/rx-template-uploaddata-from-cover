@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -16,8 +16,6 @@ namespace rosa.UploadData.Structures.JobTitlesLoaderErrorReport
     public string Name { get; set; }
     
     public string Department { get; set; }
-    
-    public string DepartmentCode  { get; set; }
     
     public string Error { get; set; }
   }

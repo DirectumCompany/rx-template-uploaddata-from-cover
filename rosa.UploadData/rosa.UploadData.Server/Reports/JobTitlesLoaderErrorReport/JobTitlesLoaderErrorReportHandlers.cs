@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -20,8 +20,7 @@ namespace rosa.UploadData
           reportSessionId,
           jobTitle.Split('|')[0],
           jobTitle.Split('|')[1],
-          jobTitle.Split('|')[2],
-          jobTitle.Split('|')[3]));
+          jobTitle.Split('|')[2]));
       
       Sungero.Docflow.PublicFunctions.Module.WriteStructuresToTable(Constants.JobTitlesLoaderErrorReport.SourceTableName, tableData);
     }

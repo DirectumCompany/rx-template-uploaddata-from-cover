@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -27,9 +27,7 @@ namespace rosa.UploadData
           employee.Split('|')[6],
           employee.Split('|')[7],
           employee.Split('|')[8],
-          employee.Split('|')[9],
-          employee.Split('|')[10],
-          employee.Split('|')[11]));
+          employee.Split('|')[9]));
       
       Sungero.Docflow.PublicFunctions.Module.WriteStructuresToTable(Constants.EmployeesLoaderErrorReport.SourceTableName, tableData);
     }
