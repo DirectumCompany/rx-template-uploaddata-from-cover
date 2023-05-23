@@ -13,13 +13,11 @@ where ReportSessionId = @ReportSessionId]]></postgres>
 ([ReportSessionId] varchar(256) NOT NULL,
  [Name] nvarchar(max) NULL,
  [Department] nvarchar(max) NULL,   
- [DepartmentCode] nvarchar(max) NULL,   
  [Error] nvarchar(max) NULL)]]></mssql>
     <postgres><![CDATA[create table {0}
 (ReportSessionId citext NOT NULL,
  Name citext NULL,
  Department citext NULL,   
- DepartmentCode citext NULL,   
  Error citext NULL)]]></postgres>
   </query>
 </queries>

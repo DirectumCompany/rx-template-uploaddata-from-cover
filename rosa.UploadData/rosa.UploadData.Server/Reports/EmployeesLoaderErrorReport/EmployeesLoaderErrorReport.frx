@@ -41,8 +41,6 @@ namespace FastReport
         <Column Name="Descriprion" DataType="System.String" PropName="Column5"/>
         <Column Name="Login" DataType="System.String" PropName="Column"/>
         <Column Name="BusinessUnit" DataType="System.String" PropName="Column"/>
-        <Column Name="JabberId" DataType="System.String" PropName="Column"/>
-        <Column Name="DepartmentCode" DataType="System.String" PropName="Column"/>
         <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
       </TableDataSource>
     </SungeroSqlDataConnection>
@@ -58,26 +56,22 @@ namespace FastReport
       <TextObject Name="Text4" Left="850.5" Width="113.4" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Табельный номер" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text9" Left="963.9" Width="122.85" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Рабочий телефон" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text10" Left="1086.75" Width="160.65" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Эл. почта" Font="Segoe UI, 9pt"/>
-      <TextObject Name="Text11" Left="1247.4" Width="179.55" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Примечание" Font="Segoe UI, 9pt"/>
-      <TextObject Name="Text24" Left="1644.3" Width="264.6" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Текст ошибки" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text11" Left="1247.4" Width="264.6" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Примечание" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text24" Left="1512" Width="264.6" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Текст ошибки" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text31" Left="170.1" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Учетная запись" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text33" Left="340.2" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Наша организация" Font="Segoe UI, 9pt"/>
-      <TextObject Name="Text35" Left="1426.95" Width="113.4" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="JabberId" Font="Segoe UI, 9pt"/>
-      <TextObject Name="Text36" Left="1540.35" Width="103.95" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Код подразделения" Font="Segoe UI, 9pt"/>
     </ReportTitleBand>
-    <DataBand Name="Data1" Top="22.9" Width="718.2" Height="18.9" DataSource="Table">
+    <DataBand Name="Data1" Top="26.04" Width="718.2" Height="18.9" DataSource="Table">
       <TextObject Name="Text5" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Person]" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text6" Left="510.3" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Department]" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text7" Left="680.4" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.JobTitle]" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text8" Left="850.5" Width="113.4" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.PersonnelNumber]" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text25" Left="963.9" Width="122.85" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Phone]" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text26" Left="1086.75" Width="160.65" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Email]" Font="Segoe UI, 9pt"/>
-      <TextObject Name="Text27" Left="1247.4" Width="179.55" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Descriprion]" Font="Segoe UI, 9pt"/>
-      <TextObject Name="Text30" Left="1644.3" Width="264.6" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Error]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text27" Left="1247.4" Width="264.6" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Descriprion]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text30" Left="1512" Width="264.6" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Error]" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text32" Left="170.1" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Login]" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text34" Left="340.2" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.BusinessUnit]" Font="Segoe UI, 9pt"/>
-      <TextObject Name="Text37" Left="1426.95" Width="113.4" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.JabberId]" Font="Segoe UI, 9pt"/>
-      <TextObject Name="Text38" Left="1540.35" Width="103.95" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.DepartmentCode]" Font="Segoe UI, 9pt"/>
     </DataBand>
   </ReportPage>
 </Report>

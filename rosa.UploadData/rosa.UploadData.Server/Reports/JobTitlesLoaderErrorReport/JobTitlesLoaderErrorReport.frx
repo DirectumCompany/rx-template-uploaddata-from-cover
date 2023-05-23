@@ -34,7 +34,6 @@ namespace FastReport
         <Column Name="Name" DataType="System.String" PropName="Column"/>
         <Column Name="Error" DataType="System.String" PropName="Column"/>
         <Column Name="Department" DataType="System.String" PropName="Column2"/>
-        <Column Name="DepartmentCode" DataType="System.String" PropName="Column"/>
         <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
       </TableDataSource>
     </SungeroSqlDataConnection>
@@ -46,14 +45,12 @@ namespace FastReport
     <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="18.9">
       <TextObject Name="Text1" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Наименование" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text2" Left="170.1" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Подразделение" Font="Segoe UI, 9pt"/>
-      <TextObject Name="Text24" Left="434.7" Width="368.55" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Текст ошибки" Font="Segoe UI, 9pt"/>
-      <TextObject Name="Text31" Left="340.2" Width="94.5" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Код подразделения" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text24" Left="340.2" Width="378" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Текст ошибки" Font="Segoe UI, 9pt"/>
     </ReportTitleBand>
-    <DataBand Name="Data1" Top="22.9" Width="718.2" Height="18.9" DataSource="Table">
+    <DataBand Name="Data1" Top="25.35" Width="718.2" Height="18.9" DataSource="Table">
       <TextObject Name="Text5" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Name]" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text6" Left="170.1" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Department]" Font="Segoe UI, 9pt"/>
-      <TextObject Name="Text30" Left="434.7" Width="368.55" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Error]" Font="Segoe UI, 9pt"/>
-      <TextObject Name="Text32" Left="340.2" Width="94.5" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.DepartmentCode]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text30" Left="340.2" Width="378" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Error]" Font="Segoe UI, 9pt"/>
     </DataBand>
   </ReportPage>
 </Report>

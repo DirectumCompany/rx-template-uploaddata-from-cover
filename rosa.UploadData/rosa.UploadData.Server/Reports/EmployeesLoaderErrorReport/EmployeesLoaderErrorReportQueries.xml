@@ -20,9 +20,7 @@ where ReportSessionId = @ReportSessionId]]></postgres>
  [Phone] nvarchar(max) NULL,
  [Email] nvarchar(max) NULL,
  [Description] nvarchar(max) NULL,  
- [JabberId] nvarchar(max) NULL,
- [DepartmentCode] nvarchar(max) NULL,
-[Error] nvarchar(max) NULL)]]></mssql>
+ [Error] nvarchar(max) NULL)]]></mssql>
     <postgres><![CDATA[create table {0}
 (ReportSessionId citext NOT NULL,
  Person citext NULL,
@@ -34,8 +32,6 @@ where ReportSessionId = @ReportSessionId]]></postgres>
  Phone citext NULL,
  Email citext NULL,
  Description citext NULL,  
- JabberId citext NULL,
- DepartmentCode citext NULL,
  Error citext NULL)]]></postgres>
   </query>
 </queries>
