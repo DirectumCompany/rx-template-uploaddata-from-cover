@@ -36,33 +36,14 @@
 Для работы требуется установленный Directum RX версии 4.0 и выше.
 
 Установка для ознакомления
-1. Склонировать репозиторий https://github.com/DirectumCompany/rx-util-importdata-net-core.git в папку.
-2. Указать в _ConfigSettings.xml DDS:
-```xml
-<block name="REPOSITORIES">
-  <repository folderName="Base" solutionType="Base" url="" /> 
-  <repository folderName="<Папка из п.1>" solutionType="Work" 
-     url="https://github.com/DirectumCompany/rx-util-importdata-net-core.git" />
-</block>
-```
+1. Склонировать репозиторий <тут ссылка> в папку.
+2. Подключить к среде разработки Directum RX как рабочий слой.
 
 ### Установка для использования на проекте
 
 Возможные варианты:
 
-A. Fork репозитория.
-1. Сделать fork репозитория <Название репозитория> для своей учетной записи.
-2. Склонировать созданный в п. 1 репозиторий в папку.
-3. Указать в _ConfigSettings.xml DDS:
-```xml 
-<block name="REPOSITORIES">
-  <repository folderName="Base" solutionType="Base" url="" /> 
-  <repository folderName="<Папка из п.2>" solutionType="Work" 
-     url="https://github.com/DirectumCompany/rx-util-importdata-net-core.git" />
-</block>
-```
-
-B. Подключение на базовый слой.
+A. Подключение на базовый слой.
 Вариант не рекомендуется, так как при выходе версии шаблона разработки не гарантируется обратная совместимость.
 1. Склонировать репозиторий <Название репозитория> в папку.
 2. Указать в _ConfigSettings.xml DDS:
