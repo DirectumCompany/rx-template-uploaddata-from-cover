@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -1006,7 +1006,6 @@ namespace rosa.UploadData.Server
           record.Name = string.Format("{0}. {1}", city.TypeName, city.Name).Replace("..", ".");
           record.Country = city.Country;
           record.Region = city.Region;
-          GD.MainSolution.Cities.As(record).FiasInnerIdGD = Convert.ToInt32(city.ObjectId);
           record.Save();
         }
         catch (Exception ex)
