@@ -1,4 +1,4 @@
-# rx-util-uploaddata-from-cover
+# rx-template-uploaddata-from-cover
 Репозиторий с шаблоном разработки «Импорт данных с обложки модуля».
 
 ## Описание
