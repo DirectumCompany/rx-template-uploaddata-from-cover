@@ -20,6 +20,7 @@
    3.6. Должности.
    3.7. Работники.
 5. Населенные пункты с ГУИД ФИАС (из ФИАС (ГАР)). 
+![image](https://github.com/DirectumCompany/rx-util-uploaddata-from-cover/assets/87016932/01146610-7894-4e88-9939-748e1688cc36)
 
 ## Модификация
 
