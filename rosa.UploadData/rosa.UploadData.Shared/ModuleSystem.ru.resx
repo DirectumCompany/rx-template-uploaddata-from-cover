@@ -164,6 +164,21 @@
     <value>Загрузить населенные пункты</value>
   </data>
   <data name="CoverDescription_LoadCities" xml:space="preserve">
-    <value>Загрузить населенные пункты</value>
+    <value>Загрузить населенные пункты из ФИАС (ГАР)</value>
+  </data>
+  <data name="CoverGroup_GAR" xml:space="preserve">
+    <value>Адресная информация</value>
+  </data>
+  <data name="CoverAction_LoadMunicipalAreas" xml:space="preserve">
+    <value>Загрузить муниципальные районы</value>
+  </data>
+  <data name="CoverDescription_LoadMunicipalAreas" xml:space="preserve">
+    <value>Загрузить муниципальные районы из ФИАС (ГАР)</value>
+  </data>
+  <data name="CoverAction_LoadSettlement" xml:space="preserve">
+    <value>Загрузить поселения</value>
+  </data>
+  <data name="CoverDescription_LoadSettlement" xml:space="preserve">
+    <value>Загрузить поселения из ФИАС (ГАР)</value>
   </data>
 </root>

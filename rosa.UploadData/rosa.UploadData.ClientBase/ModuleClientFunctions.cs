@@ -976,6 +976,8 @@ namespace rosa.UploadData.Client
     #endregion
     #endregion
     
+    #region ФИАС
+    
     #region Населенные пункты с ФИАС
     
     /// <summary>
@@ -1050,7 +1052,7 @@ namespace rosa.UploadData.Client
     }
     
     /// <summary>
-    /// Показать отчет "Ошибки  при загрузке населенных пунктов".
+    /// Показать отчет "Ошибки при загрузке населенных пунктов".
     /// </summary>
     /// <param name="companies">Список населенных пунктов.</param>
     private void ShowCitiesLoaderReport(List<Structures.Module.City> cities)
@@ -1067,5 +1069,194 @@ namespace rosa.UploadData.Client
 
     #endregion
 
+    #region Муниципальные районы с ФИАС
+    
+    /// <summary>
+    /// Загрузить Муниципальные районы из файла.
+    /// </summary>
+    public virtual void LoadMunicipalAreas()
+    {
+      var dialog = Dialogs.CreateInputDialog(Resources.LoadMunicipalAreas);
+      var file = dialog.AddFileSelect(Resources.FileSelectTitle, true).WithFilter(string.Empty, "xlsx");
+      var country = dialog.AddSelect(Resources.Country, true, Sungero.Commons.Countries.Null);
+      var region = dialog.AddSelect(Resources.Region, true, Sungero.Commons.Regions.Null);
+      
+      if (dialog.Show() != DialogButtons.Ok)
+        return;
+
+      if (System.IO.Path.GetExtension(file.Value.Name).ToLower() != ".xlsx")
+      {
+        Dialogs.ShowMessage(Resources.FileExtensionMustBeXlsx);
+        return;
+      }
+      
+      var municipalAreas = GetMunicipalAreasFromExcel(file.Value.Content, country.Value, region.Value);
+      municipalAreas = Functions.Module.Remote.CreateOrUpdateMunicipalAreas(municipalAreas);
+      var municipalAreasWithError = municipalAreas.Where(x => !string.IsNullOrEmpty(x.Error));
+      if (municipalAreasWithError.Any())
+        ShowMunicipalAreasLoaderReport(municipalAreasWithError.ToList());
+      Dialogs.NotifyMessage(Resources.EndOfLoadNotifyMessageTextFormat(municipalAreas.Count, municipalAreasWithError.Count()));
+    }
+    
+    /// <summary>
+    /// Получить записи справочника Муниципальные районы из Excel.
+    /// </summary>
+    /// <param name="file">Файл.</param>
+    /// <returns>Список населенных пунктов.</returns>
+    private List<Structures.Module.MunicipalArea> GetMunicipalAreasFromExcel(byte[] file, Sungero.Commons.ICountry country, Sungero.Commons.IRegion region)
+    {
+      var municipalAreas = new List<Structures.Module.MunicipalArea>();
+      using (var memory = new System.IO.MemoryStream(file))
+      {
+        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var worksheet = workbook.Worksheet(1);
+        
+        IXLRange range;
+        var currentRow = 2;
+        while(!(range = worksheet.Range(currentRow, 1, currentRow, 3)).IsEmpty())
+        {
+          var area = Structures.Module.MunicipalArea.Create();
+          try
+          {
+            area.Country = country;
+            area.Region = region;
+            area.ObjectId = range.Cell(1,2).Value.ToString().ToLower();
+            area.ObjectGUID = range.Cell(1,3).Value.ToString().ToLower();
+            area.Name = range.Cell(1,5).Value.ToString();
+            area.TypeName = range.Cell(1,6).Value.ToString();
+            area.Level = range.Cell(1,7).Value.ToString();
+            area.IsActual = range.Cell(1,14).Value.ToString();
+            area.IsActive = range.Cell(1,15).Value.ToString();
+          }
+          catch (Exception ex)
+          {
+            area.Error = ex.Message;
+          }
+          
+          if (area.IsActive == "1" && area.Level == "3")
+            municipalAreas.Add(area);
+          currentRow++;
+        }
+      }
+      
+      return municipalAreas;
+    }
+    
+
+    /// <summary>
+    /// Показать отчет "Ошибки при загрузке муниципальных районов".
+    /// </summary>
+    /// <param name="municipalAreas">Список муниципальных районов.</param>
+    private void ShowMunicipalAreasLoaderReport(List<Structures.Module.MunicipalArea> municipalAreas)
+    {
+      var report = Reports.GetMunicipalAreasLoaderErrorReport();
+      var errorText = string.Join(";", municipalAreas.Select(x => string.Format("{0}|{1}|{2}|{3}",
+                                                                                x.Name,
+                                                                                x.ObjectGUID,
+                                                                                x.TypeName,
+                                                                                x.Error)).ToArray());
+      report.LoaderErrorsStructure = errorText;
+      report.Open();
+    }
+
+    #endregion
+ 
+    #region Поселения с ФИАС
+    
+    /// <summary>
+    /// Загрузить Поселения из файла.
+    /// </summary>
+    public virtual void LoadSettlements()
+    {
+      var dialog = Dialogs.CreateInputDialog(rosa.UploadData.Resources.LoadSettlements);
+      var file = dialog.AddFileSelect(Resources.FileSelectTitle, true).WithFilter(string.Empty, "xlsx");
+      var country = dialog.AddSelect(Resources.Country, true, Sungero.Commons.Countries.Null);
+      var region = dialog.AddSelect(Resources.Region, true, Sungero.Commons.Regions.Null);
+      
+      if (dialog.Show() != DialogButtons.Ok)
+        return;
+
+      if (System.IO.Path.GetExtension(file.Value.Name).ToLower() != ".xlsx")
+      {
+        Dialogs.ShowMessage(Resources.FileExtensionMustBeXlsx);
+        return;
+      }
+      
+      var settlements = GetSettlementsFromExcel(file.Value.Content, country.Value, region.Value);
+      settlements = Functions.Module.Remote.CreateOrUpdateSettlements(settlements);
+      var settlementsWithError = settlements.Where(x => !string.IsNullOrEmpty(x.Error));
+      if (settlementsWithError.Any())
+        ShowSettlementsLoaderReport(settlementsWithError.ToList());
+      Dialogs.NotifyMessage(Resources.EndOfLoadNotifyMessageTextFormat(settlements.Count, settlementsWithError.Count()));
+    }
+    
+    /// <summary>
+    /// Получить записи справочника Поселения из Excel.
+    /// </summary>
+    /// <param name="file">Файл.</param>
+    /// <returns>Список поселений.</returns>
+    private List<Structures.Module.Settlement> GetSettlementsFromExcel(byte[] file, Sungero.Commons.ICountry country, Sungero.Commons.IRegion region)
+    {
+      var settlements = new List<Structures.Module.Settlement>();
+      using (var memory = new System.IO.MemoryStream(file))
+      {
+        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var worksheet = workbook.Worksheet(1);
+        
+        IXLRange range;
+        var currentRow = 2;
+        while(!(range = worksheet.Range(currentRow, 1, currentRow, 3)).IsEmpty())
+        {
+          var settlement = Structures.Module.Settlement.Create();
+          try
+          {
+            settlement.Country = country;
+            settlement.Region = region;
+            settlement.ObjectId = range.Cell(1,2).Value.ToString().ToLower();
+            settlement.ObjectGUID = range.Cell(1,3).Value.ToString().ToLower();
+            settlement.Name = range.Cell(1,5).Value.ToString();
+            settlement.TypeName = range.Cell(1,6).Value.ToString();
+            settlement.Level = range.Cell(1,7).Value.ToString();
+            settlement.IsActual = range.Cell(1,14).Value.ToString();
+            settlement.IsActive = range.Cell(1,15).Value.ToString();
+          }
+          catch (Exception ex)
+          {
+            settlement.Error = ex.Message;
+          }
+          
+          if (settlement.IsActive == "1" && settlement.Level == "4")
+            settlements.Add(settlement);
+          currentRow++;
+        }
+      }
+      
+      return settlements;
+    }
+    
+    /// <summary>
+    /// Показать отчет "Ошибки при загрузке поселений".
+    /// </summary>
+    /// <param name="settlements">Список поселений.</param>
+    private void ShowSettlementsLoaderReport(List<Structures.Module.Settlement> settlements)
+    {
+      var report = Reports.GetSettlementsLoaderErrorReport();
+      var errorText = string.Join(";", settlements.Select(x => string.Format("{0}|{1}|{2}|{3}",
+                                                                             x.Name,
+                                                                             x.ObjectGUID,
+                                                                             x.TypeName,
+                                                                             x.Error)).ToArray());
+      report.LoaderErrorsStructure = errorText;
+      report.Open();
+    }
+
+    #endregion
+    
+    #region Функции интеграции
+    
+    
+    #endregion
+    
+    #endregion
   }
 }

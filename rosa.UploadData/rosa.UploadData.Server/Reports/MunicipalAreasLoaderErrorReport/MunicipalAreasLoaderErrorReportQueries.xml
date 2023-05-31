@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="SelectFromTempTable">
+    <mssql><![CDATA[select *
+from UploadData_Reports_MunicipalAreasLoaderError
+where ReportSessionId = @ReportSessionId]]></mssql>
+    <postgres><![CDATA[select *
+from UploadData_Reports_MunicipalAreasLoaderError
+where ReportSessionId = @ReportSessionId]]></postgres>
+  </query>
+  <query key="CreateSourceTable">
+    <mssql><![CDATA[create table {0}
+([ReportSessionId] varchar(256) NOT NULL,
+ [Name] nvarchar(max) NULL,
+ [ObjectGUID] nvarchar(max) NULL,
+ [TypeName] nvarchar(max) NULL,
+ [Error] nvarchar(max) NULL)]]></mssql>
+    <postgres><![CDATA[create table {0}
+(ReportSessionId citext NOT NULL,
+ Name citext NULL,
+ ObjectGUID citext NULL,
+ TypeName citext NULL,
+ Error citext NULL)]]></postgres>
+  </query>
+</queries>

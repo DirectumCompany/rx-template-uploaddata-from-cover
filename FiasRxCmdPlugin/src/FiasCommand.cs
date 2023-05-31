@@ -19,11 +19,11 @@ namespace Sungero.RxCmd
 
       // Загрузка иерархии по муниципальному делению.
       Func<string> defaultValue = () => "0";
-      this.Add(new BaseCommand("add_mun_hierarchy", "Add municipal hierarchy.")
+      this.Add(new BaseCommand("add_municipal_hierarchy", "Add municipal hierarchy.")
                {
                  new Argument<string>("filePath", "Path to file AS_MUN_HIERARCHY_*.XML."),
                  new Argument<string>("regionCode", defaultValue, "Region code")
-               }.WithHandler(typeof(FiasCommand), nameof(AddMunHIERARCHYCommandHandler)));
+               }.WithHandler(typeof(FiasCommand), nameof(AddMunicipalHierarchyCommandHandler)));
 
     }
 
@@ -31,12 +31,13 @@ namespace Sungero.RxCmd
     /// Загрузка иерархии по муниципальному делению.
     /// </summary>
     /// <param name="filePath">Путь к файлу с иерархией.</param>
+    /// <param name="regionCode">Код региона.</param>
     /// <returns>Код возврата.</returns>
-    public static int AddMunHIERARCHYCommandHandler(string username, string password, string service, string filePath, string regionCode = "0")
+    public static int AddMunicipalHierarchyCommandHandler(string username, string password, string service, string filePath, string regionCode = "0")
     {
       // Установить параметры подключения к сервису интеграции Directum RX.
       int exitCode = IntegrationServiceClient.Setup(username, password, service);
-      return (exitCode == 0) ? FiasManager.AddMunHierarchy(filePath, regionCode) : exitCode;
+      return (exitCode == 0) ? FiasManager.AddMunicipalHierarchy(filePath, regionCode) : exitCode;
     }
 
   }

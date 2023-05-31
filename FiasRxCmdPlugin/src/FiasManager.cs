@@ -24,19 +24,20 @@ namespace Sungero.RxCmd
     /// <summary>
     /// Заготовка для реализации команды.
     /// </summary>
-    /// <param name="filePath">Параметр.</param>    
+    /// <param name="filePath">Путь к файлу с иерархией.</param>
+    /// <param name="regionCode">Код региона.</param>
     /// <returns>Код возврата.</returns>
-    public static int AddMunHierarchy(string filePath, string regionCode)
+    public static int AddMunicipalHierarchy(string filePath, string regionCode)
     {
       try
       {
         Logger.Debug("Start.");
         // Загрузить id населенных пунктов
-        List<string> cityIds = IntegrationServiceClient.RunFunctionWithListResult<string>("Settings", "GetCityIds", new { regionCode });
+        List<string> cityIds = IntegrationServiceClient.RunFunctionWithListResult<string>("UploadData", "GetCityIds", new { regionCode });
         // Загрузить id муниципальных районов
-        List<string> municipalAreaIds = IntegrationServiceClient.RunFunctionWithListResult<string>("Settings", "GetMunicipalAreaIds", new { regionCode });
+        List<string> municipalAreaIds = IntegrationServiceClient.RunFunctionWithListResult<string>("UploadData", "GetMunicipalAreaIds", new { regionCode });
         // Загрузить id поселений
-        List<string> settlementIds = IntegrationServiceClient.RunFunctionWithListResult<string>("Settings", "GetSettlementIds", new { regionCode });
+        List<string> settlementIds = IntegrationServiceClient.RunFunctionWithListResult<string>("UploadData", "GetSettlementIds", new { regionCode });
 
         XmlReader reader = XmlReader.Create(filePath);
         int i = 0;
@@ -51,8 +52,8 @@ namespace Sungero.RxCmd
             var isActive = reader.GetAttribute("ISACTIVE");
             if (isActive == "1" && settlementIds.IndexOf(objectId) != -1 && municipalAreaIds.IndexOf(parentObjId) != -1)
             {
-              var result = IntegrationServiceClient.RunActionWithResult("Settings", "AddMunHierarchySettlement", new { objectId, parentObjId });
-              Logger.Debug("{0} Settlement OBJECTID: {1} is {2}", i, reader.GetAttribute("OBJECTID"), result);
+              var result = IntegrationServiceClient.RunActionWithResult("UploadData", "AddMunicipalHierarchySettlement", new { objectId, parentObjId });
+              Logger.Debug("{0} Settlement OBJECTID: {1}. Update result - {2}", i, reader.GetAttribute("OBJECTID"), result);
             }
             else
               Logger.Debug("{0} Settlement OBJECTID: {1} is {2}", i, reader.GetAttribute("OBJECTID"), "not found.");
@@ -62,6 +63,7 @@ namespace Sungero.RxCmd
 
         // Загрузить иерархию для населенных пунктов
         reader.Close();
+        
         reader = XmlReader.Create(filePath);
         i = 0;
         while (reader.Read())
@@ -73,15 +75,15 @@ namespace Sungero.RxCmd
             var isActive = reader.GetAttribute("ISACTIVE");
             if (isActive == "1" && cityIds.IndexOf(objectId) != -1 && (municipalAreaIds.IndexOf(parentObjId) != -1 || settlementIds.IndexOf(parentObjId) != -1))
             {
-              var result = IntegrationServiceClient.RunActionWithResult("Settings", "AddMunHierarchyCity", new { objectId, parentObjId });
-              Logger.Debug("{0} City OBJECTID: {1} is {2}", i, reader.GetAttribute("OBJECTID"), result);
+              var result = IntegrationServiceClient.RunActionWithResult("UploadData", "AddMunicipalHierarchyCity", new { objectId, parentObjId });
+              Logger.Debug("{0} City OBJECTID: {1}. Update result - {2}", i, reader.GetAttribute("OBJECTID"), result);
             }
             else
               Logger.Debug("{0} City OBJECTID: {1} is {2}", i, reader.GetAttribute("OBJECTID"), "not found.");
             i++;
           }
         }
-
+        reader.Close(); 
         Logger.Debug("DONE.");
       }
       catch (Exception ex)

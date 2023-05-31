@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -295,7 +295,7 @@ namespace rosa.UploadData.Structures.Module
   /// <summary>
   /// Муниципальный район.
   /// </summary>
-  partial class MunArea
+  partial class MunicipalArea
   {
     // Страна
     public Sungero.Commons.ICountry Country  { get; set; }
@@ -363,7 +363,7 @@ namespace rosa.UploadData.Structures.Module
   }
 
   /// <summary>
-  /// Муниципальный район.
+  /// Поселение.
   /// </summary>
   partial class Settlement
   {

@@ -192,6 +192,9 @@
     <value>Загрузить муниципальные районы</value>
   </data>
   <data name="LoadSettlements" xml:space="preserve">
-    <value>Загрузить сельские/городские поселения</value>
+    <value>Загрузить поселения</value>
+  </data>
+  <data name="LoadMunicipalAreas" xml:space="preserve">
+    <value>Загрузить муниципальные районы</value>
   </data>
 </root>
