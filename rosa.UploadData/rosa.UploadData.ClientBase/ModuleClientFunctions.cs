@@ -1106,9 +1106,9 @@ namespace rosa.UploadData.Client
     private List<Structures.Module.MunicipalArea> GetMunicipalAreasFromExcel(byte[] file, Sungero.Commons.ICountry country, Sungero.Commons.IRegion region)
     {
       var municipalAreas = new List<Structures.Module.MunicipalArea>();
-      using (var memory = new System.IO.MemoryStream(file))
+      using (var fileStream = new System.IO.MemoryStream(file))
       {
-        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(fileStream, XLEventTracking.Disabled);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
@@ -1198,9 +1198,9 @@ namespace rosa.UploadData.Client
     private List<Structures.Module.Settlement> GetSettlementsFromExcel(byte[] file, Sungero.Commons.ICountry country, Sungero.Commons.IRegion region)
     {
       var settlements = new List<Structures.Module.Settlement>();
-      using (var memory = new System.IO.MemoryStream(file))
+      using (var fileStream = new System.IO.MemoryStream(file))
       {
-        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(fileStream, XLEventTracking.Disabled);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
@@ -1250,11 +1250,6 @@ namespace rosa.UploadData.Client
       report.Open();
     }
 
-    #endregion
-    
-    #region Функции интеграции
-    
-    
     #endregion
     
     #endregion

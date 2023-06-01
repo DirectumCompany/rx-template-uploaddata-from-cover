@@ -1138,6 +1138,9 @@ namespace rosa.UploadData.Server
     [Public(WebApiRequestType = RequestType.Post)]
     public static bool AddMunicipalHierarchyCity(string objectId, string parentObjId)
     {
+      long id = 0, parentId = 0;
+      if (!long.TryParse(objectId, out id) || !long.TryParse(parentObjId, out parentId))
+        return false;
       var city = GD.GovernmentSolution.Cities.GetAll(c => c.FiasInnerIdGD == objectId).FirstOrDefault();
       var municipalArea = GD.GovernmentCommons.MunicipalAreas.GetAll(m => m.FiasInnerId == parentObjId).FirstOrDefault();
       var settlement = GD.GovernmentCommons.Settlements.GetAll(m => m.FiasInnerId == parentObjId).FirstOrDefault();
@@ -1168,6 +1171,9 @@ namespace rosa.UploadData.Server
     [Public(WebApiRequestType = RequestType.Post)]
     public static bool AddMunicipalHierarchySettlement(string objectId, string parentObjId)
     {
+      long id = 0, parentId = 0;
+      if (!long.TryParse(objectId, out id) || !long.TryParse(parentObjId, out parentId))
+        return false;
       var settlement = GD.GovernmentCommons.Settlements.GetAll(m => m.FiasInnerId == objectId).FirstOrDefault();
       var municipalArea = GD.GovernmentCommons.MunicipalAreas.GetAll(m => m.FiasInnerId == parentObjId).FirstOrDefault();
       if (municipalArea != null && settlement != null)
@@ -1194,7 +1200,7 @@ namespace rosa.UploadData.Server
     [Public(WebApiRequestType = RequestType.Get)]
     public static List<string> GetCityIds(string regionCode)
     {
-      var region = Sungero.Commons.Regions.GetAll(r => r.Code == regionCode).FirstOrDefault();
+      var region = Sungero.Commons.Regions.GetAll(r => r.Code.ToUpper() == regionCode.ToUpper()).FirstOrDefault();
       if (region != null)
         return GD.GovernmentSolution.Cities.GetAll(c => c.FiasInnerIdGD != null && Equals(c.Region, region)).Select(c => c.FiasInnerIdGD).ToList();
       else
@@ -1208,7 +1214,7 @@ namespace rosa.UploadData.Server
     [Public(WebApiRequestType = RequestType.Get)]
     public static List<string> GetMunicipalAreaIds(string regionCode)
     {
-      var region = Sungero.Commons.Regions.GetAll(r => r.Code == regionCode).FirstOrDefault();
+      var region = Sungero.Commons.Regions.GetAll(r => r.Code.ToUpper() == regionCode.ToUpper()).FirstOrDefault();
       if (region != null)
         return GD.GovernmentCommons.MunicipalAreas.GetAll(c => c.FiasInnerId != null && Equals(c.Region, region)).Select(c => c.FiasInnerId).ToList();
       else
@@ -1222,7 +1228,7 @@ namespace rosa.UploadData.Server
     [Public(WebApiRequestType = RequestType.Get)]
     public static List<string> GetSettlementIds(string regionCode)
     {
-      var region = Sungero.Commons.Regions.GetAll(r => r.Code == regionCode).FirstOrDefault();
+      var region = Sungero.Commons.Regions.GetAll(r => r.Code.ToUpper() == regionCode.ToUpper()).FirstOrDefault();
       if (region != null)
         return GD.GovernmentCommons.Settlements.GetAll(c => c.FiasInnerId != null && Equals(c.Region, region)).Select(c => c.FiasInnerId).ToList();
       else
