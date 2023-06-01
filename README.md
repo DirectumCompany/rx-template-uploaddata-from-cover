@@ -95,7 +95,8 @@
  7. В системе в модуле <b>Загрузка данных</b> по гиперссылке <i>Загрузить поселения</i> ...
 
 ### Порядок загрузки иерархии из ФИАС (ГАР).
-1. Открыть проект плагина FiasPlugin c помощью Visual Studio. проект находится в сиходных кодах в папке FiasRxCmdPlugin.
+Если
+1. Открыть проект плагина FiasPlugin c помощью Visual Studio. Исходный код проекта находится в папке Extension\FiasRxCmdPlugin.
 2. Опубликовать проект в папку (Меню Build/Publish Selection). 
 3. Из папки из п. 2 скопировать файлы библиотеки Sungero.RxCmd.FiasPlugin.dll, Sungero.RxCmd.FiasPlugin.pdb, Sungero.RxCmd.FiasPlugin.deps.json в папку с плагинами утилиты RxCmd \DirectumLauncher\etc\_builds\DirectumRX\RxCmd\Plugins.
 4. Запустить rxcmd c параметрами:
