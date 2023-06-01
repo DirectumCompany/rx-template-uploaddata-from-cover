@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>Sungero.RxCmd.FiasPlugin</AssemblyName>
+    <RootNamespace>Sungero.RxCmd</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Sungero.RxCmd.Core">
+      <HintPath>..\lib\Sungero.RxCmd.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+
+    <Reference Include="Sungero.Logging">
+      <HintPath>..\lib\Sungero.Logging.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Simple.OData.Client" Version="5.18.2" />
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta1.20574.7" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="7.0.0" />
+  </ItemGroup>
+  
+</Project>
