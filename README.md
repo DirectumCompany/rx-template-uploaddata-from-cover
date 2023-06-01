@@ -95,10 +95,7 @@
  7. В системе в модуле <b>Загрузка данных</b> по гиперссылке <i>Загрузить поселения</i> ...
 
 ### Порядок загрузки иерархии из ФИАС (ГАР).
-Если
-1. Открыть проект плагина FiasPlugin c помощью Visual Studio. Исходный код проекта находится в папке Extension\FiasRxCmdPlugin.
-2. Опубликовать проект в папку (Меню Build/Publish Selection). 
-3. Из папки из п. 2 скопировать файлы библиотеки Sungero.RxCmd.FiasPlugin.dll, Sungero.RxCmd.FiasPlugin.pdb, Sungero.RxCmd.FiasPlugin.deps.json в папку с плагинами утилиты RxCmd \DirectumLauncher\etc\_builds\DirectumRX\RxCmd\Plugins.
+1. Из папки lib\FIASRxCmdPlugin скопировать файлы библиотеки Sungero.RxCmd.FiasPlugin.dll, Sungero.RxCmd.FiasPlugin.pdb, Sungero.RxCmd.FiasPlugin.deps.json в папку с плагинами утилиты RxCmd \DirectumLauncher\etc\_builds\DirectumRX\RxCmd\Plugins.
 4. Запустить rxcmd c параметрами:
   
   rxcmd.exe fias add_municipal_hierarchy -n "login" -p password -s "http://localhost/Integration/odata" "<Путь к файлу с иерархией>" "<Код региона>"
@@ -118,6 +115,7 @@
 <b>Примечания</b>. 
 1. Загрузку иерархии необходимо проиводить, когда уже загружены населенные пункты, поселения, муниципальные районы.
 2. Подробнее о разработке плагинов к RxCmd можно почитать https://club.directum.ru/webhelp/directumrx/web/index.html?sds_sozdanie_plagina_rxcmd.htm. 
+3. Если необходимы модификации плагина, то исходный код проекта плагина находится в папке Extension\FiasRxCmdPlugin.
 
 
 ## Порядок установки
