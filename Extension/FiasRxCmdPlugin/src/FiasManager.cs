@@ -70,8 +70,8 @@ namespace Sungero.RxCmd
           {
             if (reader.NodeType == XmlNodeType.Element && reader.Name == "ITEM")
             {
-              string objectId = reader.GetAttribute("OBJECTID");
-              string parentObjId = reader.GetAttribute("PARENTOBJID");
+              var objectId = reader.GetAttribute("OBJECTID");
+              var parentObjId = reader.GetAttribute("PARENTOBJID");
               var isActive = reader.GetAttribute("ISACTIVE");
               if (isActive == "1" && cityIds.IndexOf(objectId) != -1 && (municipalAreaIds.IndexOf(parentObjId) != -1 || settlementIds.IndexOf(parentObjId) != -1))
               {
