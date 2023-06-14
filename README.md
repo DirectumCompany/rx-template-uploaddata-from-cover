@@ -99,7 +99,7 @@
  7. В системе в модуле <b>Загрузка данных</b> по гиперссылке <i>Загрузить поселения</i> ...
 
 ### Порядок загрузки иерархии из ФИАС (ГАР).
-1. Из папки lib\FIASRxCmdPlugin скопировать файлы библиотеки Sungero.RxCmd.FiasPlugin.dll, Sungero.RxCmd.FiasPlugin.pdb, Sungero.RxCmd.FiasPlugin.deps.json в папку с плагинами утилиты RxCmd \DirectumLauncher\etc\_builds\DirectumRX\RxCmd\Plugins.
+1. Из папки lib\FIASRxCmdPlugin скопировать файлы библиотеки Sungero.RxCmd.FiasPlugin.dll, Sungero.RxCmd.FiasPlugin.pdb, Sungero.RxCmd.FiasPlugin.deps.json в папку с плагинами утилиты RxCmd \etc\\_builds\DirectumRX\RxCmd\Plugins.
 4. Запустить rxcmd c параметрами:
   
   rxcmd.exe fias add_municipal_hierarchy -n "login" -p password -s "http://localhost/Integration/odata" "<Путь к файлу с иерархией>" "<Код региона>"
