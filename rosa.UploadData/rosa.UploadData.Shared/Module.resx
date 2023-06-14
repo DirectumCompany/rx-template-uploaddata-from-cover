@@ -192,6 +192,9 @@ Of them with an error: {1}</value>
     <value>Load Mun Area</value>
   </data>
   <data name="LoadSettlements" xml:space="preserve">
-    <value>Load Settlements</value>
+    <value>Load settlements</value>
+  </data>
+  <data name="LoadMunicipalAreas" xml:space="preserve">
+    <value>Load municipal areas</value>
   </data>
 </root>

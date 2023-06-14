@@ -4,7 +4,6 @@ using System.Linq;
 using Sungero.Core;
 using Sungero.CoreEntities;
 
-namespace rosa.Utility.Structures.Module
+namespace rosa.UploadData
 {
-
 }

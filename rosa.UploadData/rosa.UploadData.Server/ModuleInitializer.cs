@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -23,6 +23,8 @@ namespace rosa.UploadData.Server
       Reports.AccessRights.Grant(Reports.GetFileRetentionPeriodLoaderErrorReport().Info, Roles.AllUsers, DefaultReportAccessRightsTypes.Execute);
       Reports.AccessRights.Grant(Reports.GetCaseFileLoaderErrorReport().Info, Roles.AllUsers, DefaultReportAccessRightsTypes.Execute);
       Reports.AccessRights.Grant(Reports.GetCitiesLoaderErrorReport().Info, Roles.AllUsers, DefaultReportAccessRightsTypes.Execute);
+      Reports.AccessRights.Grant(Reports.GetMunicipalAreasLoaderErrorReport().Info, Roles.AllUsers, DefaultReportAccessRightsTypes.Execute);
+      Reports.AccessRights.Grant(Reports.GetSettlementsLoaderErrorReport().Info, Roles.AllUsers, DefaultReportAccessRightsTypes.Execute);
       
       CreateReportsTables();
     }
@@ -43,6 +45,8 @@ namespace rosa.UploadData.Server
       var fileRetentionPeriodErrorReportTableName = Constants.FileRetentionPeriodLoaderErrorReport.SourceTableName;
       var caseFileErrorReportTableName = Constants.CaseFileLoaderErrorReport.SourceTableName;
       var citiesLoaderErrorReportTableName = Constants.CitiesLoaderErrorReport.SourceTableName;
+      var municipalAreasLoaderErrorReportTableName = Constants.MunicipalAreasLoaderErrorReport.SourceTableName;
+      var settlementsLoaderErrorReportTableName = Constants.SettlementsLoaderErrorReport.SourceTableName;
       
       Sungero.Docflow.PublicFunctions.Module.DropReportTempTables(new[] {
                                                                     classifierLoaderErrorReportTableName,
@@ -55,7 +59,9 @@ namespace rosa.UploadData.Server
                                                                     employeesLoaderErrorReportTableName,
                                                                     caseFileErrorReportTableName,
                                                                     fileRetentionPeriodErrorReportTableName,
-                                                                    citiesLoaderErrorReportTableName});
+                                                                    citiesLoaderErrorReportTableName,
+                                                                    municipalAreasLoaderErrorReportTableName,
+                                                                    settlementsLoaderErrorReportTableName});
 
       Sungero.Docflow.PublicFunctions.Module.ExecuteSQLCommandFormat(Queries.ClassifierLoaderErrorReport.CreateSourceTable, new[] {classifierLoaderErrorReportTableName});
       Sungero.Docflow.PublicFunctions.Module.ExecuteSQLCommandFormat(Queries.CompaniesLoaderErrorReport.CreateSourceTable, new[] {companiesLoaderErrorReportTableName});
@@ -68,6 +74,8 @@ namespace rosa.UploadData.Server
       Sungero.Docflow.PublicFunctions.Module.ExecuteSQLCommandFormat(Queries.CaseFileLoaderErrorReport.CreateSourceTable, new[] {caseFileErrorReportTableName});
       Sungero.Docflow.PublicFunctions.Module.ExecuteSQLCommandFormat(Queries.FileRetentionPeriodLoaderErrorReport.CreateSourceTable, new[] {fileRetentionPeriodErrorReportTableName});
       Sungero.Docflow.PublicFunctions.Module.ExecuteSQLCommandFormat(Queries.CitiesLoaderErrorReport.CreateSourceTable, new[] {citiesLoaderErrorReportTableName});
+      Sungero.Docflow.PublicFunctions.Module.ExecuteSQLCommandFormat(Queries.MunicipalAreasLoaderErrorReport.CreateSourceTable, new[] {municipalAreasLoaderErrorReportTableName});
+      Sungero.Docflow.PublicFunctions.Module.ExecuteSQLCommandFormat(Queries.SettlementsLoaderErrorReport.CreateSourceTable, new[] {settlementsLoaderErrorReportTableName});
     }
   }
 }

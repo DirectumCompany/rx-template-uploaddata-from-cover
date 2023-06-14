@@ -1007,6 +1007,7 @@ namespace rosa.UploadData.Server
           record.Name = string.Format("{0}. {1}", city.TypeName, city.Name).Replace("..", ".");
           record.Country = city.Country;
           record.Region = city.Region;
+          GD.GovernmentSolution.Cities.As(record).FiasInnerIdGD = city.ObjectId;
           record.Save();
         }
         catch (Exception ex)
@@ -1026,10 +1027,217 @@ namespace rosa.UploadData.Server
     {
       if (string.IsNullOrEmpty(guid))
         return null;
-      return GD.GovernmentSolution.Cities.GetAll(x => x.FIASIdGD.ToLower() == guid && x.Status == Sungero.CoreEntities.DatabookEntry.Status.Active).FirstOrDefault();
+      return GD.GovernmentSolution.Cities.GetAll(x => x.FIASIdGD != null && x.FIASIdGD.ToUpper() == guid.ToUpper() && x.Status == Sungero.CoreEntities.DatabookEntry.Status.Active).FirstOrDefault();
     }
     #endregion
 
+    #region Муниципальные районы
+    
+    /// <summary>
+    /// Создать или обновить записи справочника муниципальные районы.
+    /// </summary>
+    /// <param name="municipalAreas">Список муниципальных районов.</param>
+    [Remote]
+    public List<Structures.Module.MunicipalArea> CreateOrUpdateMunicipalAreas(List<Structures.Module.MunicipalArea> municipalAreas)
+    {
+      foreach (var municipalArea in municipalAreas.Where(x => string.IsNullOrEmpty(x.Error)))
+      {
+        try
+        {
+          var record = GetMunicipalAreaRecordByGuid(municipalArea.ObjectGUID);
+          if (record == null)
+          {
+            record = GD.GovernmentCommons.MunicipalAreas.Create();
+            record.FiasId = municipalArea.ObjectGUID;
+          }
+          
+          record.Name = string.Format("{0}. {1}", municipalArea.TypeName, municipalArea.Name).Replace("..", ".");
+          record.Country = municipalArea.Country;
+          record.Region = municipalArea.Region;
+          record.FiasInnerId = municipalArea.ObjectId;
+          record.Save();
+        }
+        catch (Exception ex)
+        {
+          municipalArea.Error = ex.Message;
+        }
+      }
+      return municipalAreas;
+    }
+
+    /// <summary>
+    /// Получить запись справочника Муниципальные районы.
+    /// </summary>
+    /// <param name="guid">Гуид.</param>
+    /// <returns>Запись справочника Муниципальный район.</returns>
+    public GD.GovernmentCommons.IMunicipalArea GetMunicipalAreaRecordByGuid(string guid)
+    {
+      if (string.IsNullOrEmpty(guid))
+        return null;
+      return GD.GovernmentCommons.MunicipalAreas.GetAll(x => x.FiasId != null && x.FiasId.ToUpper() == guid.ToUpper() && x.Status == Sungero.CoreEntities.DatabookEntry.Status.Active).FirstOrDefault();
+    }
+    
+    #endregion
+    
+    #region Поселения
+    
+    /// <summary>
+    /// Создать или обновить записи справочника Поселения.
+    /// </summary>
+    /// <param name="settlements">Список поселений.</param>
+    [Remote]
+    public List<Structures.Module.Settlement> CreateOrUpdateSettlements(List<Structures.Module.Settlement> settlements)
+    {
+      foreach (var settlement in settlements.Where(x => string.IsNullOrEmpty(x.Error)))
+      {
+        try
+        {
+          var record = GetSettlementRecordByGuid(settlement.ObjectGUID);
+          if (record == null)
+          {
+            record = GD.GovernmentCommons.Settlements.Create();
+            record.FiasId = settlement.ObjectGUID;
+          }
+          
+          record.Name = string.Format("{0}. {1}", settlement.TypeName, settlement.Name).Replace("..", ".");
+          record.Country = settlement.Country;
+          record.Region = settlement.Region;
+          record.FiasInnerId = settlement.ObjectId;
+          record.Save();
+        }
+        catch (Exception ex)
+        {
+          settlement.Error = ex.Message;
+        }
+      }
+      return settlements;
+    }
+
+    /// <summary>
+    /// Получить запись справочника Поселения.
+    /// </summary>
+    /// <param name="guid">Гуид.</param>
+    /// <returns>Запись справочника Поселения.</returns>
+    public GD.GovernmentCommons.ISettlement GetSettlementRecordByGuid(string guid)
+    {
+      if (string.IsNullOrEmpty(guid))
+        return null;
+      return GD.GovernmentCommons.Settlements.GetAll(x => x.FiasId != null && x.FiasId.ToUpper() == guid.ToUpper() && x.Status == Sungero.CoreEntities.DatabookEntry.Status.Active).FirstOrDefault();
+    }
+
+    #endregion
+    
+    #region Функции интеграции
+
+    /// <summary>
+    /// Добавить вышестоящий элемент в населенные пункты.
+    /// </summary>
+    /// <param name="objectId">Глобальный уникальный идентификатор адресного объекта.</param>
+    /// <param name="parentObjId">Идентификатор родительского объект.</param>
+    /// <returns>Если иерархия создана то True, иначе False</returns>
+    [Public(WebApiRequestType = RequestType.Post)]
+    public static bool AddMunicipalHierarchyCity(string objectId, string parentObjId)
+    {
+      var id = 0L;
+      var parentId = 0L;
+      if (!long.TryParse(objectId, out id) || !long.TryParse(parentObjId, out parentId))
+        return false;
+      var city = GD.GovernmentSolution.Cities.GetAll(c => c.FiasInnerIdGD == objectId).FirstOrDefault();
+      var municipalArea = GD.GovernmentCommons.MunicipalAreas.GetAll(m => m.FiasInnerId == parentObjId).FirstOrDefault();
+      var settlement = GD.GovernmentCommons.Settlements.GetAll(m => m.FiasInnerId == parentObjId).FirstOrDefault();
+      if (city != null && (municipalArea != null || settlement != null))
+      {
+        try
+        {
+          city.MunicipalAreaGD = settlement != null ? settlement.MunicipalArea : municipalArea;
+          city.SettlementGD = settlement;
+          city.Save();
+        }
+        catch (Exception ex)
+        {
+          Logger.ErrorFormat("City id = {0} not update. Reason - {1}.", city.Id, ex.Message);
+          return false;
+        }
+        return true;
+      }
+      return false;
+    }
+
+    /// <summary>
+    /// Добавить муниципальный район в поселения.
+    /// </summary>
+    /// <param name="objectId">Глобальный уникальный идентификатор адресного объекта.</param>
+    /// <param name="parentObjId">Идентификатор родительского объект.</param>
+    /// <returns>Если иерархия создана то True, иначе False</returns>
+    [Public(WebApiRequestType = RequestType.Post)]
+    public static bool AddMunicipalHierarchySettlement(string objectId, string parentObjId)
+    {
+      var id = 0L;
+      var parentId = 0L;
+      if (!long.TryParse(objectId, out id) || !long.TryParse(parentObjId, out parentId))
+        return false;
+      var settlement = GD.GovernmentCommons.Settlements.GetAll(m => m.FiasInnerId == objectId).FirstOrDefault();
+      var municipalArea = GD.GovernmentCommons.MunicipalAreas.GetAll(m => m.FiasInnerId == parentObjId).FirstOrDefault();
+      if (municipalArea != null && settlement != null)
+      {
+        try
+        {
+          settlement.MunicipalArea = municipalArea;
+          settlement.Save();
+        }
+        catch (Exception ex)
+        {
+          Logger.ErrorFormat("Settlement id = {0} not update. Reason - {1}.", settlement.Id, ex.Message);
+          return false;
+        }
+        return true;
+      }
+      return false;
+    }
+
+    /// <summary>
+    /// Получить id населенных пунктов.
+    /// </summary>
+    /// <returns>id населенных пунктов</returns>
+    [Public(WebApiRequestType = RequestType.Get)]
+    public static List<string> GetCityIds(string regionCode)
+    {
+      var region = Sungero.Commons.Regions.GetAll(r => r.Code != null && r.Code.ToUpper() == regionCode.ToUpper()).FirstOrDefault();
+      if (region != null)
+        return GD.GovernmentSolution.Cities.GetAll(c => c.FiasInnerIdGD != null && Equals(c.Region, region)).Select(c => c.FiasInnerIdGD).ToList();
+      else
+        return GD.GovernmentSolution.Cities.GetAll(c => c.FiasInnerIdGD != null).Select(c => c.FiasInnerIdGD).ToList();
+    }
+
+    /// <summary>
+    /// Получить id муниципальных районов.
+    /// </summary>
+    /// <returns>id муниципальных районов</returns>
+    [Public(WebApiRequestType = RequestType.Get)]
+    public static List<string> GetMunicipalAreaIds(string regionCode)
+    {
+      var region = Sungero.Commons.Regions.GetAll(r => r.Code != null && r.Code.ToUpper() == regionCode.ToUpper()).FirstOrDefault();
+      if (region != null)
+        return GD.GovernmentCommons.MunicipalAreas.GetAll(c => c.FiasInnerId != null && Equals(c.Region, region)).Select(c => c.FiasInnerId).ToList();
+      else
+        return GD.GovernmentCommons.MunicipalAreas.GetAll(c => c.FiasInnerId != null).Select(c => c.FiasInnerId).ToList();
+    }
+
+    /// <summary>
+    /// Получить id поселений.
+    /// </summary>
+    /// <returns>id поселений</returns>
+    [Public(WebApiRequestType = RequestType.Get)]
+    public static List<string> GetSettlementIds(string regionCode)
+    {
+      var region = Sungero.Commons.Regions.GetAll(r => r.Code != null && r.Code.ToUpper() == regionCode.ToUpper()).FirstOrDefault();
+      if (region != null)
+        return GD.GovernmentCommons.Settlements.GetAll(c => c.FiasInnerId != null && Equals(c.Region, region)).Select(c => c.FiasInnerId).ToList();
+      else
+        return GD.GovernmentCommons.Settlements.GetAll(c => c.FiasInnerId != null).Select(c => c.FiasInnerId).ToList();
+    }
+    
+    #endregion
 
   }
 }

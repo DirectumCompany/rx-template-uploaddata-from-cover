@@ -14,6 +14,14 @@
     "Actions": [
       {
         "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "06baba68-36a5-41b2-825d-f16481385726",
+        "Name": "LoadSettlement",
+        "FunctionName": "LoadSettlements",
+        "GroupId": "ac2768ee-d1c8-40d5-b527-910ac91efb4a",
+        "PreviousItemGuid": "e50c13b2-16b9-4765-8976-017135af4212"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
         "NameGuid": "0cbe3a4b-23fb-499b-a138-9de3990dba8a",
         "Name": "LoadLogin",
         "FunctionName": "LoadLogins",
@@ -32,8 +40,7 @@
         "NameGuid": "19206979-73e2-4bec-b403-617eea06c547",
         "Name": "LoadCities",
         "FunctionName": "LoadCities",
-        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
-        "PreviousItemGuid": "54f2cdc4-718c-47fa-a289-0c2ab17e1a93"
+        "GroupId": "ac2768ee-d1c8-40d5-b527-910ac91efb4a"
       },
       {
         "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
@@ -115,6 +122,14 @@
       },
       {
         "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "e50c13b2-16b9-4765-8976-017135af4212",
+        "Name": "LoadMunicipalAreas",
+        "FunctionName": "LoadMunicipalAreas",
+        "GroupId": "ac2768ee-d1c8-40d5-b527-910ac91efb4a",
+        "PreviousItemGuid": "19206979-73e2-4bec-b403-617eea06c547"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
         "NameGuid": "e960c814-02a2-40a8-95d5-ccf41b7552e2",
         "Name": "LoadThemes",
         "FunctionName": "LoadThemesClassifier",
@@ -157,6 +172,14 @@
         "BackgroundPosition": "Stretch",
         "IconName": "GroupIconCases_d8a51d567ce24f178a1d38d769b4a0e2.png",
         "PreviousItemGuid": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "TabId": "10a6cf62-299e-4852-ab84-7d30dea00aee"
+      },
+      {
+        "NameGuid": "ac2768ee-d1c8-40d5-b527-910ac91efb4a",
+        "Name": "GAR",
+        "BackgroundPosition": "Stretch",
+        "IconName": "GroupIconGAR_ac2768eed1c840d5b527910ac91efb4a.png",
+        "PreviousItemGuid": "d8a51d56-7ce2-4f17-8a1d-38d769b4a0e2",
         "TabId": "10a6cf62-299e-4852-ab84-7d30dea00aee"
       }
     ],
@@ -254,6 +277,14 @@
     {
       "ItemId": "d60c9cdd-201a-4158-a061-93e6f462f1b4",
       "PreviousItemId": "307ebe22-010d-4e6d-9bd7-44fe603982e9"
+    },
+    {
+      "ItemId": "ce995f1e-70a3-4c99-95ea-e1309c9a5b62",
+      "PreviousItemId": "d60c9cdd-201a-4158-a061-93e6f462f1b4"
+    },
+    {
+      "ItemId": "d3e4574f-5578-4f8b-932b-4cdb0fa9270a",
+      "PreviousItemId": "ce995f1e-70a3-4c99-95ea-e1309c9a5b62"
     }
   ],
   "HandledEvents": [
@@ -279,6 +310,83 @@
   ],
   "Overridden": [
     "IsVisible"
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "AddMunicipalHierarchyCity",
+      "Parameters": [
+        {
+          "Name": "objectId",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "parentObjId",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "AddMunicipalHierarchySettlement",
+      "Parameters": [
+        {
+          "Name": "objectId",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "parentObjId",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "GetCityIds",
+      "Parameters": [
+        {
+          "Name": "regionCode",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.Collections.Generic.List<global::System.String>",
+      "ReturnTypeFullName": "System.Collections.Generic.List",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "GetMunicipalAreaIds",
+      "Parameters": [
+        {
+          "Name": "regionCode",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.Collections.Generic.List<global::System.String>",
+      "ReturnTypeFullName": "System.Collections.Generic.List",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "GetSettlementIds",
+      "Parameters": [
+        {
+          "Name": "regionCode",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.Collections.Generic.List<global::System.String>",
+      "ReturnTypeFullName": "System.Collections.Generic.List",
+      "WebApiRequestType": "Get"
+    }
   ],
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
@@ -328,7 +436,8 @@
     "Country",
     "Region",
     "LoadMunArea",
-    "LoadSettlements"
+    "LoadSettlements",
+    "LoadMunicipalAreas"
   ],
   "ServerAssemblyName": "rosa.UploadData.Server",
   "ServerNamespace": "rosa.UploadData.Server",
