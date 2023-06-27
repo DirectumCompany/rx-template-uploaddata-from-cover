@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Core.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;Sungero.Domain.Shared&#13;&#10;Sungero.CoreEntities.Shared&#13;&#10;Sungero.Reporting.Shared&#13;&#10;CommonLibrary&#13;&#10;Sungero.Domain.Interfaces&#13;&#10;GD.Settings.Shared&#13;&#10;GD.Settings.Server" ReportInfo.CreatorVersion="2020.2.12.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+using Sungero.Domain.Shared;
+using Sungero.CoreEntities;
+using Sungero.Core;
+using Resources = GD.Settings.Reports.Resources;
+
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+  }
+}
+  </ScriptText>
+  <Dictionary>
+    <SungeroSqlDataConnection Name="Sungero_Connection" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties" ConnectionStringExpression="[SungeroConnectionString]">
+      <TableDataSource Name="Table" Alias="LoaderErrors" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectFromTempTable}">
+        <Column Name="RetentionPeriod" DataType="System.String" PropName="Column"/>
+        <Column Name="Department" DataType="System.String" PropName="Column"/>
+        <Column Name="Note" DataType="System.String" PropName="Column"/>
+        <Column Name="Error" DataType="System.String" PropName="Column"/>
+        <Column Name="Ind" DataType="System.String" PropName="Column"/>
+        <Column Name="Title" DataType="System.String" PropName="Column1"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+    </SungeroSqlDataConnection>
+    <SungeroParameter Name="SungeroConnectionString" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties, DontShow" Id="a080acf9-86bf-498c-82bd-b2decb09f76a" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ReportSessionId" Id="a4ce2fb1-8649-499b-8392-05a5e2415016" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="LoaderErrorsStructure" Id="4c8cdf15-0119-42ac-ae36-8222921de4a1" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+  </Dictionary>
+  <ReportPage Name="Page1" FirstPageSource="1" OtherPagesSource="1" Watermark.Font="Arial, 60pt" ExtraDesignWidth="true" UnlimitedWidth="true">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="18.9">
+      <TextObject Name="Text1" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Подразделение" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text2" Left="170.1" Width="179.55" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Срок хранения" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text3" Left="349.65" Width="160.65" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Индекс" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text4" Left="831.6" Width="207.9" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Текст ошибки" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text9" Left="670.95" Width="160.65" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Примечание" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text10" Left="510.3" Width="160.65" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Заголовок" Font="Segoe UI, 9pt"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="24.09" Width="718.2" Height="18.9" DataSource="Table">
+      <TextObject Name="Text5" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Department]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text6" Left="170.1" Width="179.55" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.RetentionPeriod]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text7" Left="349.65" Width="160.65" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Ind]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text8" Left="831.6" Width="207.9" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Error]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text11" Left="510.3" Width="160.65" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Title]" Font="Segoe UI, 9pt"/>
+      <TextObject Name="Text12" Left="670.95" Width="160.65" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Note]" Font="Segoe UI, 9pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>

@@ -1,0 +1,459 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+  "Name": "UploadData",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "GD.UploadData.Client",
+  "ClientBaseAssemblyName": "GD.UploadData.ClientBase",
+  "ClientBaseNamespace": "GD.UploadData.ClientBase",
+  "ClientNamespace": "GD.UploadData.Client",
+  "Code": "UploadD",
+  "CompanyCode": "GD",
+  "Cover": {
+    "NameGuid": "b9781eb8-c14f-478b-b8b5-6a6b5f7842d4",
+    "Actions": [
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "06baba68-36a5-41b2-825d-f16481385726",
+        "Name": "LoadSettlement",
+        "FunctionName": "LoadSettlements",
+        "GroupId": "ac2768ee-d1c8-40d5-b527-910ac91efb4a",
+        "PreviousItemGuid": "e50c13b2-16b9-4765-8976-017135af4212"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "0cbe3a4b-23fb-499b-a138-9de3990dba8a",
+        "Name": "LoadLogin",
+        "FunctionName": "LoadLogins",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "0e1657cf-ec3b-4e25-92ec-2924d5349d5d",
+        "Name": "LoadDeparrtment",
+        "FunctionName": "LoadDepartments",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "PreviousItemGuid": "cb08b7c7-d6e8-43d6-a7f2-518f673bee5e"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "19206979-73e2-4bec-b403-617eea06c547",
+        "Name": "LoadCities",
+        "FunctionName": "LoadCities",
+        "GroupId": "ac2768ee-d1c8-40d5-b527-910ac91efb4a"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "226d41a3-4d97-445a-a53c-943c45938346",
+        "Name": "LoadQuestions",
+        "FunctionName": "LoadQuestionsClassifier",
+        "GroupId": "811eb44b-40ee-4f9f-8314-febb17edc0b4",
+        "PreviousItemGuid": "37e610fc-87f3-4675-8917-ec8352f35923"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "2cb9f01a-f480-4b98-973d-cf5e63452470",
+        "Name": "LoadRetentionPeriod",
+        "FunctionName": "LoadFileRetentionPeriod",
+        "GroupId": "d8a51d56-7ce2-4f17-8a1d-38d769b4a0e2"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "37e610fc-87f3-4675-8917-ec8352f35923",
+        "Name": "LoadTopics",
+        "FunctionName": "LoadTopicsClassifier",
+        "GroupId": "811eb44b-40ee-4f9f-8314-febb17edc0b4",
+        "PreviousItemGuid": "e960c814-02a2-40a8-95d5-ccf41b7552e2"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "54f2cdc4-718c-47fa-a289-0c2ab17e1a93",
+        "Name": "LoadEmployee",
+        "FunctionName": "LoadEmployees",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "PreviousItemGuid": "7d3a4ee4-ae1c-4c6c-a2c4-017581d3ad0f"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "63e71bcf-1deb-460c-9874-5a7732cf9a4a",
+        "Name": "LoadSubquestions",
+        "FunctionName": "LoadSubQuestionsClassifier",
+        "GroupId": "811eb44b-40ee-4f9f-8314-febb17edc0b4",
+        "PreviousItemGuid": "226d41a3-4d97-445a-a53c-943c45938346"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "6a9e1784-3862-43ae-875f-b72f75c8d427",
+        "Name": "LoadSections",
+        "FunctionName": "LoadSectionsClassifier",
+        "GroupId": "811eb44b-40ee-4f9f-8314-febb17edc0b4"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "7d3a4ee4-ae1c-4c6c-a2c4-017581d3ad0f",
+        "Name": "LoadJobTitle",
+        "FunctionName": "LoadJobTitles",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "PreviousItemGuid": "0e1657cf-ec3b-4e25-92ec-2924d5349d5d"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "99c2aa21-1787-4f49-a678-d573503a62a6",
+        "Name": "LoadCase",
+        "FunctionName": "LoadCaseFile",
+        "GroupId": "d8a51d56-7ce2-4f17-8a1d-38d769b4a0e2",
+        "PreviousItemGuid": "2cb9f01a-f480-4b98-973d-cf5e63452470"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "cb08b7c7-d6e8-43d6-a7f2-518f673bee5e",
+        "Name": "LoadBusinessUnit",
+        "FunctionName": "LoadBusinessUnits",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "PreviousItemGuid": "d7b7e8cc-39e3-44e9-8073-b277b97687bf"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "d7b7e8cc-39e3-44e9-8073-b277b97687bf",
+        "Name": "LoadCompanies",
+        "FunctionName": "LoadCompanies",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "PreviousItemGuid": "fe25fd20-d46a-47c9-a02c-ede55585b27e"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "e50c13b2-16b9-4765-8976-017135af4212",
+        "Name": "LoadMunicipalAreas",
+        "FunctionName": "LoadMunicipalAreas",
+        "GroupId": "ac2768ee-d1c8-40d5-b527-910ac91efb4a",
+        "PreviousItemGuid": "19206979-73e2-4bec-b403-617eea06c547"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "e960c814-02a2-40a8-95d5-ccf41b7552e2",
+        "Name": "LoadThemes",
+        "FunctionName": "LoadThemesClassifier",
+        "GroupId": "811eb44b-40ee-4f9f-8314-febb17edc0b4",
+        "PreviousItemGuid": "6a9e1784-3862-43ae-875f-b72f75c8d427"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "fe25fd20-d46a-47c9-a02c-ede55585b27e",
+        "Name": "LoadPerson",
+        "FunctionName": "LoadPersons",
+        "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "PreviousItemGuid": "0cbe3a4b-23fb-499b-a138-9de3990dba8a"
+      }
+    ],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "3bdae08e-61c4-444f-9a58-3e4e90a8b9bd",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [
+      {
+        "NameGuid": "811eb44b-40ee-4f9f-8314-febb17edc0b4",
+        "Name": "Classifier",
+        "BackgroundPosition": "Stretch",
+        "IconName": "GroupIconClassifier_811eb44b40ee4f9f8314febb17edc0b4.png",
+        "TabId": "10a6cf62-299e-4852-ab84-7d30dea00aee"
+      },
+      {
+        "NameGuid": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "Name": "OrganizationalStructure",
+        "BackgroundPosition": "Stretch",
+        "IconName": "GroupIconOrganizationalStructure_231af21d79c74c9dab5cda34511778f4.png",
+        "PreviousItemGuid": "811eb44b-40ee-4f9f-8314-febb17edc0b4",
+        "TabId": "10a6cf62-299e-4852-ab84-7d30dea00aee"
+      },
+      {
+        "NameGuid": "d8a51d56-7ce2-4f17-8a1d-38d769b4a0e2",
+        "Name": "Cases",
+        "BackgroundPosition": "Stretch",
+        "IconName": "GroupIconCases_d8a51d567ce24f178a1d38d769b4a0e2.png",
+        "PreviousItemGuid": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+        "TabId": "10a6cf62-299e-4852-ab84-7d30dea00aee"
+      },
+      {
+        "NameGuid": "ac2768ee-d1c8-40d5-b527-910ac91efb4a",
+        "Name": "GAR",
+        "BackgroundPosition": "Stretch",
+        "IconName": "GroupIconGAR_ac2768eed1c840d5b527910ac91efb4a.png",
+        "PreviousItemGuid": "d8a51d56-7ce2-4f17-8a1d-38d769b4a0e2",
+        "TabId": "10a6cf62-299e-4852-ab84-7d30dea00aee"
+      }
+    ],
+    "Header": {
+      "NameGuid": "a39c105d-eca9-4595-8d18-dbe9bd60acdc",
+      "BackgroundPosition": "Stretch"
+    },
+    "Tabs": [
+      {
+        "NameGuid": "10a6cf62-299e-4852-ab84-7d30dea00aee",
+        "Name": "Tab"
+      }
+    ]
+  },
+  "Dependencies": [
+    {
+      "Id": "719f9950-43ad-4300-8559-130f76a6b0eb",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    },
+    {
+      "Id": "011a7117-3db8-44ae-963a-74568896c47f",
+      "MaxVersion": "",
+      "MinVersion": "4.0.1.1"
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "6f93b648-9a9c-4315-bdd8-b4d0e77cbaab"
+    },
+    {
+      "ItemId": "374fabab-e508-457c-9249-9206dcf46432",
+      "PreviousItemId": "6f93b648-9a9c-4315-bdd8-b4d0e77cbaab"
+    },
+    {
+      "ItemId": "c0df38db-2c1a-4dd7-9750-811b325dc946",
+      "PreviousItemId": "374fabab-e508-457c-9249-9206dcf46432"
+    },
+    {
+      "ItemId": "f3f39dd1-e103-4474-9cdf-7e68cf383cb7",
+      "PreviousItemId": "c0df38db-2c1a-4dd7-9750-811b325dc946"
+    },
+    {
+      "ItemId": "fb18228d-e23c-4076-a82a-bbf8ec571a4e",
+      "PreviousItemId": "f3f39dd1-e103-4474-9cdf-7e68cf383cb7"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "7d22270a-c75e-4acc-9ced-237b31a06025",
+      "PreviousItemId": "fb18228d-e23c-4076-a82a-bbf8ec571a4e"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "b1128eb4-d509-4f0e-8309-0dbbfeb4a6a7",
+      "PreviousItemId": "7d22270a-c75e-4acc-9ced-237b31a06025"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "ae3de76c-58c2-4c73-b910-46f0dfaa8887",
+      "PreviousItemId": "b1128eb4-d509-4f0e-8309-0dbbfeb4a6a7"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "d2413fd3-2fa1-4a1d-976e-477f6e49039d",
+      "PreviousItemId": "ae3de76c-58c2-4c73-b910-46f0dfaa8887"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "5e00d1d9-043a-43fd-9ed1-a951e30217c1",
+      "PreviousItemId": "d2413fd3-2fa1-4a1d-976e-477f6e49039d"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "fea797a5-2959-40ee-b9bc-df03b7b2be4c",
+      "PreviousItemId": "5e00d1d9-043a-43fd-9ed1-a951e30217c1"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "cd202dff-83a4-48e5-9b20-79f6889047fa",
+      "PreviousItemId": "fea797a5-2959-40ee-b9bc-df03b7b2be4c"
+    },
+    {
+      "ItemId": "40056f6b-d617-495f-accd-97b48e2a6b19",
+      "PreviousItemId": "cd202dff-83a4-48e5-9b20-79f6889047fa"
+    },
+    {
+      "ItemId": "8353548d-37af-4688-bbc1-1d566e9dfe9b",
+      "PreviousItemId": "40056f6b-d617-495f-accd-97b48e2a6b19"
+    },
+    {
+      "ItemId": "76044dac-8d57-4ac5-b5e7-6b08e00ff2f0",
+      "PreviousItemId": "8353548d-37af-4688-bbc1-1d566e9dfe9b"
+    },
+    {
+      "ItemId": "64011ae6-18a6-443f-8bd2-098fef84d6ec",
+      "PreviousItemId": "76044dac-8d57-4ac5-b5e7-6b08e00ff2f0"
+    },
+    {
+      "ItemId": "30ca125d-627b-4b65-8a83-5a8efa72bc5c",
+      "PreviousItemId": "64011ae6-18a6-443f-8bd2-098fef84d6ec"
+    },
+    {
+      "ItemId": "4a88fab9-390b-4485-af4d-38b6cced8142",
+      "PreviousItemId": "30ca125d-627b-4b65-8a83-5a8efa72bc5c"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "GD.UploadData",
+  "IsolatedAssemblyName": "GD.UploadData.Isolated",
+  "IsolatedNamespace": "GD.UploadData.Isolated",
+  "Libraries": [
+    {
+      "NameGuid": "f0294694-5182-4ef9-a7da-d73a1d5bb127",
+      "Name": "ClosedXML",
+      "Scope": "Both"
+    },
+    {
+      "NameGuid": "c7425342-3598-45d5-b23d-8583dfdfcd2d",
+      "Name": "InteropExcel",
+      "Scope": "Both"
+    }
+  ],
+  "Overridden": [
+    "IsVisible"
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "AddMunicipalHierarchyCity",
+      "Parameters": [
+        {
+          "Name": "objectId",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "parentObjId",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "AddMunicipalHierarchySettlement",
+      "Parameters": [
+        {
+          "Name": "objectId",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "parentObjId",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean",
+      "WebApiRequestType": "Post"
+    },
+    {
+      "Name": "GetCityIds",
+      "Parameters": [
+        {
+          "Name": "regionCode",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.Collections.Generic.List<global::System.String>",
+      "ReturnTypeFullName": "System.Collections.Generic.List",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "GetMunicipalAreaIds",
+      "Parameters": [
+        {
+          "Name": "regionCode",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.Collections.Generic.List<global::System.String>",
+      "ReturnTypeFullName": "System.Collections.Generic.List",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "GetSettlementIds",
+      "Parameters": [
+        {
+          "Name": "regionCode",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.Collections.Generic.List<global::System.String>",
+      "ReturnTypeFullName": "System.Collections.Generic.List",
+      "WebApiRequestType": "Get"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "GD.UploadData",
+  "ResourcesKeys": [
+    "FileSelectTitle",
+    "LoadTopicClassifierDialogTitle",
+    "LoadSectionsDialogTitle",
+    "LoadThemeClassifierDialogTitle",
+    "LoadQuestionClassifierDialogTitle",
+    "LoadSubquestionClassifierDialogTitle",
+    "EndOfLoadNotifyMessageText",
+    "LoadDepartmentDialogTitle",
+    "LoadBusinessUnitDialogTitle",
+    "LoadJobTitleDialogTitle",
+    "NotFoundSectionExceptionText",
+    "NotFoundTopicExceptionText",
+    "NotFoundThemeExceptionText",
+    "NotFoundQuestionExceptionText",
+    "NotFoundCompanyExceptionText",
+    "NotFoundRegionExceptionText",
+    "NotFoundCityExceptionText",
+    "NotFoundBankExceptionText",
+    "LoadPersonDialogTitle",
+    "NotFoundJobTitleExceptionText",
+    "NotFoundDepartmentExceptionText",
+    "NotFoundDepartmentWithoutBusinessUnitExceptionText",
+    "DuplicatePersonsTitleExceptionText",
+    "NotFoundBusinessUnitExceptionText",
+    "LoadEmployeeDialogTitle",
+    "NotFoundEmployeeExceptionText",
+    "FileExtensionMustBeXlsx",
+    "NotFoundLoginExceptionText",
+    "SelectFile",
+    "File",
+    "ResultFilePath",
+    "LoadComplete",
+    "ActionAvailableToAdministrators",
+    "FailedCreateReason",
+    "RetentionPeriodNotFound",
+    "SuccessfullyCreated",
+    "RecordExist",
+    "NotFoundRetentionPeriodExceptionText",
+    "LoadCaseFileDialogTitle",
+    "LoadFileRetentionPeriodDialogTitle",
+    "LoadCitiesDialogTitle",
+    "Country",
+    "Region",
+    "LoadMunArea",
+    "LoadSettlements",
+    "LoadMunicipalAreas"
+  ],
+  "ServerAssemblyName": "GD.UploadData.Server",
+  "ServerNamespace": "GD.UploadData.Server",
+  "SharedAssemblyName": "GD.UploadData.Shared",
+  "SharedNamespace": "GD.UploadData.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.39",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

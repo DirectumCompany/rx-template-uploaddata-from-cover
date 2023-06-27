@@ -1,0 +1,60 @@
+{
+  "$type": "Sungero.Metadata.SolutionMetadata, Sungero.Metadata",
+  "NameGuid": "719f9950-43ad-4300-8559-130f76a6b0eb",
+  "Name": "UploadDataSolution",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "GD.UploadDataSolution.Client",
+  "ClientBaseAssemblyName": "GD.UploadDataSolution.ClientBase",
+  "ClientBaseNamespace": "GD.UploadDataSolution.ClientBase",
+  "ClientNamespace": "GD.UploadDataSolution.Client",
+  "Code": "Upload1",
+  "CompanyCode": "GD",
+  "Cover": {
+    "NameGuid": "9a4c217a-f90c-401c-b307-fde7693472e5",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "6e3e3dda-afd9-40b5-843a-adcc925d4540",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "f62e5750-6fb0-482f-9cb8-38c947a3ca2a",
+      "BackgroundPosition": "Stretch"
+    },
+    "Tabs": []
+  },
+  "DesktopViews": [],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "GD.UploadDataSolution",
+  "IsolatedAssemblyName": "GD.UploadDataSolution.Isolated",
+  "IsolatedNamespace": "GD.UploadDataSolution.Isolated",
+  "OrderedSpecialFolders": [],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "GD.UploadDataSolution",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "GD.UploadDataSolution.Server",
+  "ServerNamespace": "GD.UploadDataSolution.Server",
+  "SharedAssemblyName": "GD.UploadDataSolution.Shared",
+  "SharedNamespace": "GD.UploadDataSolution.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.39",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "SolutionMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}
