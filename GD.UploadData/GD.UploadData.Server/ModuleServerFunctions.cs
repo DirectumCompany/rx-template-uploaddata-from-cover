@@ -70,7 +70,7 @@ namespace GD.UploadData.Server
         {
           var topic = GetTopicRecord(classifier.Code);
           if (topic == null)
-            topic = Topics.Create();
+            topic = GD.CitizenRequests.Topics.Create();
           topic.Code = classifier.Code;
           topic.Name = classifier.Name;
           topic.Save();
@@ -88,11 +88,11 @@ namespace GD.UploadData.Server
     /// </summary>
     /// <param name="code">Код.</param>
     /// <returns>Запись справочника Тематики классификатора обращений.</returns>
-    public ITopic GetTopicRecord(string code)
+    public GD.CitizenRequests.ITopic GetTopicRecord(string code)
     {
       if (string.IsNullOrEmpty(code))
         return null;
-      return Topics.GetAll(x => x.Code == code && x.Status == Sungero.CoreEntities.DatabookEntry.Status.Active).FirstOrDefault();
+      return GD.CitizenRequests.Topics.GetAll(x => x.Code == code && x.Status == Sungero.CoreEntities.DatabookEntry.Status.Active).FirstOrDefault();
     }
     
     #endregion
