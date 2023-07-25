@@ -36,7 +36,7 @@ namespace Sungero.RxCmd
     public static int AddMunicipalHierarchyCommandHandler(string username, string password, string service, string filePath, string regionCode = "0")
     {
       // Установить параметры подключения к сервису интеграции Directum RX.
-      int exitCode = IntegrationServiceClient.Setup(username, password, service);
+      int exitCode = IntegrationServiceClient.Setup(username, password, null, service);
       return (exitCode == 0) ? FiasManager.AddMunicipalHierarchy(filePath, regionCode) : exitCode;
     }
 
