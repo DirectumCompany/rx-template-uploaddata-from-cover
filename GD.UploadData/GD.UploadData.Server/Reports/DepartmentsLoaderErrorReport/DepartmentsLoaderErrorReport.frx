@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Core.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;Sungero.Domain.Shared&#13;&#10;Sungero.CoreEntities.Shared&#13;&#10;Sungero.Reporting.Shared&#13;&#10;CommonLibrary&#13;&#10;Sungero.Domain.Interfaces&#13;&#10;GD.Settings.Shared&#13;&#10;GD.Settings.Server" ReportInfo.CreatorVersion="2020.2.12.0">
+<Report ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Core.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;Sungero.Domain.Shared&#13;&#10;Sungero.CoreEntities.Shared&#13;&#10;Sungero.Reporting.Shared&#13;&#10;CommonLibrary&#13;&#10;Sungero.Localization&#13;&#10;Sungero.Declension&#13;&#10;Sungero.Domain.Interfaces&#13;&#10;GD.UploadData.Shared&#13;&#10;GD.UploadData.Server" ReportInfo.CreatorVersion="2020.2.12.0">
   <ScriptText>using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,7 +18,7 @@ using FastReport.Utils;
 using Sungero.Domain.Shared;
 using Sungero.CoreEntities;
 using Sungero.Core;
-using Resources = GD.Settings.Reports.Resources;
+using Resources = GD.UploadData.Reports.Resources;
 
 
 namespace FastReport
@@ -59,7 +59,7 @@ namespace FastReport
       <TextObject Name="Text36" Left="954.45" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Телефон" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text41" Left="1124.55" Width="264.6" Height="18.9" Border.Lines="All" Fill.Color="224, 224, 224" Text="Примечание" Font="Segoe UI, 9pt"/>
     </ReportTitleBand>
-    <DataBand Name="Data1" Top="26.04" Width="718.2" Height="18.9" DataSource="Table">
+    <DataBand Name="Data1" Top="22.9" Width="718.2" Height="18.9" DataSource="Table">
       <TextObject Name="Text5" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Name]" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text6" Left="170.1" Width="170.1" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.ShortName]" Font="Segoe UI, 9pt"/>
       <TextObject Name="Text30" Left="1389.15" Width="378" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[LoaderErrors.Error]" Font="Segoe UI, 9pt"/>
