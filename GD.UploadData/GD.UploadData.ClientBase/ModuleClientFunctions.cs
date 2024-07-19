@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -249,16 +249,20 @@ namespace GD.UploadData.Client
       {
         var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
         var worksheet = workbook.Worksheet(1);
+        var lastRow = worksheet.LastRowUsed().RowNumber();
         
-        IXLRange range;
-        var currentRow = 2;
-        while(!(range = worksheet.Range(currentRow, 1, currentRow, 3)).IsEmpty())
+        for (int currentRow = 2; currentRow <= lastRow; currentRow++)
         {
+          var range = worksheet.Range(currentRow, 1, currentRow, 3);
+          var cellValue = range.Cell(1, 1).Value.ToString();
+          if (string.IsNullOrEmpty(cellValue))
+            continue;
+          
           var jobTitle = Structures.Module.JobTitle.Create();
           try
           {
-            jobTitle.Name = range.Cell(1,1).Value.ToString();
-            jobTitle.Department = range.Cell(1,2).Value.ToString();
+            jobTitle.Name = cellValue;
+            jobTitle.Department = range.Cell(1, 2).Value.ToString();
           }
           catch (Exception ex)
           {
@@ -266,7 +270,6 @@ namespace GD.UploadData.Client
           }
           
           jobTitles.Add(jobTitle);
-          currentRow++;
         }
       }
       
@@ -1160,7 +1163,7 @@ namespace GD.UploadData.Client
     }
 
     #endregion
- 
+    
     #region Поселения с ФИАС
     
     /// <summary>
