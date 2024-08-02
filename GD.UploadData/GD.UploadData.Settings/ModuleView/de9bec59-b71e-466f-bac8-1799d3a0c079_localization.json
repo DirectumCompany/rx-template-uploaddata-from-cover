@@ -1,0 +1,170 @@
+{
+  "Cases_Title_d8a51d567ce24f178a1d38d769b4a0e2": {
+    "en-US": "Cases",
+    "ru-RU": "Загрузить номенклатуру дел"
+  },
+  "Classifier_Title_811eb44b40ee4f9f8314febb17edc0b4": {
+    "en-US": "Classifier",
+    "ru-RU": "Классификатор обращений"
+  },
+  "CoverHeaderSettings_Description_a39c105deca945958d18dbe9bd60acdc": {
+    "en-US": "The module is intended for administration and configuration of modules",
+    "ru-RU": "Модуль предназначен для загрузки данных в справочники зи таблиц Excel"
+  },
+  "CoverHeaderSettings_Title_a39c105deca945958d18dbe9bd60acdc": {
+    "en-US": "UploadData",
+    "ru-RU": "Загрузка данных"
+  },
+  "Description": {},
+  "GAR_Title_ac2768eed1c840d5b527910ac91efb4a": {
+    "en-US": "Address information",
+    "ru-RU": "Адресная информация"
+  },
+  "LoadBusinessUnit_Description_cb08b7c7d6e843d6a7f2518f673bee5e": {
+    "en-US": "Load Business Unit from organizational structure ",
+    "ru-RU": "Загрузить наши организации из организационной структуры"
+  },
+  "LoadBusinessUnit_Title_cb08b7c7d6e843d6a7f2518f673bee5e": {
+    "en-US": "Load Business Unit",
+    "ru-RU": "Загрузить наши организации"
+  },
+  "LoadCase_Description_99c2aa2117874f49a678d573503a62a6": {
+    "en-US": "Load case from file",
+    "ru-RU": "Загрузить номенклатуру дел из файла"
+  },
+  "LoadCase_Title_99c2aa2117874f49a678d573503a62a6": {
+    "en-US": "Load case",
+    "ru-RU": "Загрузить номенклатуру дел"
+  },
+  "LoadCities_Description_1920697973e24becb403617eea06c547": {
+    "en-US": "Download settlements",
+    "ru-RU": "Загрузить населенные пункты из ФИАС (ГАР)"
+  },
+  "LoadCities_Title_1920697973e24becb403617eea06c547": {
+    "en-US": "Load Cities",
+    "ru-RU": "Загрузить населенные пункты"
+  },
+  "LoadCompanies_Description_d7b7e8cc39e344e98073b277b97687bf": {
+    "en-US": "Load Companies  from organizational structure",
+    "ru-RU": "Загрузить организации из организационной структуры"
+  },
+  "LoadCompanies_Title_d7b7e8cc39e344e98073b277b97687bf": {
+    "en-US": "Load Companies",
+    "ru-RU": "Загрузить организации"
+  },
+  "LoadDeparrtment_Description_0e1657cfec3b4e2592ec2924d5349d5d": {
+    "en-US": "Load Deparrtments from organizational structure",
+    "ru-RU": "Загрузить подразделения из организационной структуры"
+  },
+  "LoadDeparrtment_Title_0e1657cfec3b4e2592ec2924d5349d5d": {
+    "en-US": "Load Deparrtments",
+    "ru-RU": "Загрузить подразделения"
+  },
+  "LoadEmployee_Description_54f2cdc4718c47faa2890c2ab17e1a93": {
+    "en-US": "Load Employees from organizational structure ",
+    "ru-RU": "Загрузить работников из организационной структуры"
+  },
+  "LoadEmployee_Title_54f2cdc4718c47faa2890c2ab17e1a93": {
+    "en-US": "Load Employees",
+    "ru-RU": "Загрузить работников"
+  },
+  "LoadJobTitle_Description_7d3a4ee4ae1c4c6ca2c4017581d3ad0f": {
+    "en-US": "Load Job Titles from organizational structure",
+    "ru-RU": "Загрузить должности из организационной структуры"
+  },
+  "LoadJobTitle_Title_7d3a4ee4ae1c4c6ca2c4017581d3ad0f": {
+    "en-US": "Load Job Titles",
+    "ru-RU": "Загрузить должности"
+  },
+  "LoadLogin_Description_0cbe3a4b23fb499ba1389de3990dba8a": {
+    "en-US": "Load Login from organizational structure",
+    "ru-RU": "Загрузить учетные записи из организационной структуры"
+  },
+  "LoadLogin_Title_0cbe3a4b23fb499ba1389de3990dba8a": {
+    "en-US": "Load Login",
+    "ru-RU": "Загрузить учетные записи"
+  },
+  "LoadMunicipalAreas_Description_e50c13b216b947658976017135af4212": {
+    "en-US": "Load municipal areas",
+    "ru-RU": "Загрузить муниципальные районы из ФИАС (ГАР)"
+  },
+  "LoadMunicipalAreas_Title_e50c13b216b947658976017135af4212": {
+    "en-US": "Load municipal areas",
+    "ru-RU": "Загрузить муниципальные районы"
+  },
+  "LoadPerson_Description_fe25fd20d46a47c9a02cede55585b27e": {
+    "en-US": "Load Person from organizational structure ",
+    "ru-RU": "Загрузить персоны из организационной структуры"
+  },
+  "LoadPerson_Title_fe25fd20d46a47c9a02cede55585b27e": {
+    "en-US": "Load Persons",
+    "ru-RU": "Загрузить персоны"
+  },
+  "LoadQuestions_Description_226d41a34d97445aa53c943c45938346": {
+    "en-US": "Load Questions in classifier",
+    "ru-RU": "Загрузить вопросы классификатора обращений"
+  },
+  "LoadQuestions_Title_226d41a34d97445aa53c943c45938346": {
+    "en-US": "Load Questions",
+    "ru-RU": "Загрузить вопросы"
+  },
+  "LoadRetentionPeriod_Description_2cb9f01af4804b98973dcf5e63452470": {
+    "en-US": "Load retention periods from file",
+    "ru-RU": "Загрузить сроки хранения из файла"
+  },
+  "LoadRetentionPeriod_Title_2cb9f01af4804b98973dcf5e63452470": {
+    "en-US": "Load retention periods",
+    "ru-RU": "Загрузить сроки хранения"
+  },
+  "LoadSections_Description_6a9e1784386243ae875fb72f75c8d427": {
+    "en-US": "Load Sections in classifier",
+    "ru-RU": "Загрузить разделы классификатора обращений"
+  },
+  "LoadSections_Title_6a9e1784386243ae875fb72f75c8d427": {
+    "en-US": "Load Sections",
+    "ru-RU": "Загрузить разделы"
+  },
+  "LoadSettlement_Description_06baba6836a541b2825df16481385726": {
+    "en-US": "Load settlement",
+    "ru-RU": "Загрузить поселения из ФИАС (ГАР)"
+  },
+  "LoadSettlement_Title_06baba6836a541b2825df16481385726": {
+    "en-US": "Load settlement",
+    "ru-RU": "Загрузить поселения"
+  },
+  "LoadSubquestions_Description_63e71bcf1deb460c98745a7732cf9a4a": {
+    "en-US": "Load Subquestions in classifier",
+    "ru-RU": "Загрузить подвопросы классификатора обращений"
+  },
+  "LoadSubquestions_Title_63e71bcf1deb460c98745a7732cf9a4a": {
+    "en-US": "Load Subquestions",
+    "ru-RU": "Загрузить подвопросы"
+  },
+  "LoadThemes_Description_e960c81402a240a895d5ccf41b7552e2": {
+    "en-US": "Load Themes in classifier",
+    "ru-RU": "Загрузить темы классификатора обращений"
+  },
+  "LoadThemes_Title_e960c81402a240a895d5ccf41b7552e2": {
+    "en-US": "Load Themes",
+    "ru-RU": "Загрузить темы"
+  },
+  "LoadTopics_Description_37e610fc87f346758917ec8352f35923": {
+    "en-US": "Load Topics in classifier",
+    "ru-RU": "Загрузить тематики классификатора обращений"
+  },
+  "LoadTopics_Title_37e610fc87f346758917ec8352f35923": {
+    "en-US": "Load Topics",
+    "ru-RU": "Загрузить тематики"
+  },
+  "Name": {
+    "en-US": "Upload Data",
+    "ru-RU": "Загрузка данных"
+  },
+  "OrganizationalStructure_Title_231af21d79c74c9dab5cda34511778f4": {
+    "en-US": "Corporate Structure",
+    "ru-RU": "Организационная структура"
+  },
+  "Tab_Title_10a6cf62299e4852ab847d30dea00aee": {
+    "en-US": "Tab"
+  }
+}

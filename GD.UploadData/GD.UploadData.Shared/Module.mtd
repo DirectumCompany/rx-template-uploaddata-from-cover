@@ -297,6 +297,7 @@
   "InterfaceNamespace": "GD.UploadData",
   "IsolatedAssemblyName": "GD.UploadData.Isolated",
   "IsolatedNamespace": "GD.UploadData.Isolated",
+  "IsVisible": false,
   "Libraries": [
     {
       "NameGuid": "f0294694-5182-4ef9-a7da-d73a1d5bb127",
