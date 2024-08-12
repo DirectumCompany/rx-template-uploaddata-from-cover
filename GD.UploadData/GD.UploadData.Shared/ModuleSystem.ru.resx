@@ -98,7 +98,7 @@
     <value>Загрузить подвопросы</value>
   </data>
   <data name="CoverDescription" xml:space="preserve">
-    <value>Модуль предназначен для загрузки данных в справочники зи таблиц Excel</value>
+    <value>Модуль предназначен для загрузки данных в справочники из таблиц Excel</value>
   </data>
   <data name="CoverGroup_OrganizationalStructure" xml:space="preserve">
     <value>Организационная структура</value>
