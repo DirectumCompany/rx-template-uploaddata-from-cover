@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -41,7 +41,7 @@ namespace GD.UploadData.Client
       List<Structures.Module.Company> companies = new List<Structures.Module.Company>();
       using (var memory = new System.IO.MemoryStream(file))
       {
-        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(memory);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
@@ -146,7 +146,7 @@ namespace GD.UploadData.Client
       List<Structures.Module.Person> persons = new List<Structures.Module.Person>();
       using (var memory = new System.IO.MemoryStream(file))
       {
-        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(memory);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
@@ -247,7 +247,7 @@ namespace GD.UploadData.Client
       List<Structures.Module.JobTitle> jobTitles = new List<Structures.Module.JobTitle>();
       using (var memory = new System.IO.MemoryStream(file))
       {
-        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(memory);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
@@ -318,7 +318,7 @@ namespace GD.UploadData.Client
       List<Structures.Module.BusinessUnit> businessUnits = new List<Structures.Module.BusinessUnit>();
       using (var memory = new System.IO.MemoryStream(file))
       {
-        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(memory);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
@@ -423,7 +423,7 @@ namespace GD.UploadData.Client
       List<Structures.Module.Department> departments = new List<Structures.Module.Department>();
       using (var memory = new System.IO.MemoryStream(file))
       {
-        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(memory);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
@@ -506,7 +506,7 @@ namespace GD.UploadData.Client
       List<Structures.Module.Employee> employees = new List<Structures.Module.Employee>();
       using (var memory = new System.IO.MemoryStream(file))
       {
-        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(memory);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
@@ -591,7 +591,7 @@ namespace GD.UploadData.Client
       List<Structures.Module.Login> logins = new List<Structures.Module.Login>();
       using (var memory = new System.IO.MemoryStream(file))
       {
-        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(memory);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
@@ -739,7 +739,7 @@ namespace GD.UploadData.Client
       List<Structures.Module.ClassifierBase> classifiers = new List<Structures.Module.ClassifierBase>();
       using (var memory = new System.IO.MemoryStream(file))
       {
-        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(memory);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
@@ -834,7 +834,7 @@ namespace GD.UploadData.Client
       List<Structures.Module.FileRetentionPeriod> fileRetentionPeriods = new List<Structures.Module.FileRetentionPeriod>();
       using (var memory = new System.IO.MemoryStream(file))
       {
-        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(memory);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
@@ -944,7 +944,7 @@ namespace GD.UploadData.Client
     {
       using (var memory = new System.IO.MemoryStream(caseFilesInfo.File))
       {
-        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(memory);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
@@ -1017,7 +1017,7 @@ namespace GD.UploadData.Client
       var cities = new List<Structures.Module.City>();
       using (var memory = new System.IO.MemoryStream(file))
       {
-        var workbook = new XLWorkbook(memory, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(memory);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
@@ -1108,7 +1108,7 @@ namespace GD.UploadData.Client
       var municipalAreas = new List<Structures.Module.MunicipalArea>();
       using (var fileStream = new System.IO.MemoryStream(file))
       {
-        var workbook = new XLWorkbook(fileStream, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(fileStream);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
@@ -1200,7 +1200,7 @@ namespace GD.UploadData.Client
       var settlements = new List<Structures.Module.Settlement>();
       using (var fileStream = new System.IO.MemoryStream(file))
       {
-        var workbook = new XLWorkbook(fileStream, XLEventTracking.Disabled);
+        var workbook = new XLWorkbook(fileStream);
         var worksheet = workbook.Worksheet(1);
         
         IXLRange range;
