@@ -1,0 +1,812 @@
+{
+  "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+  "Cover": {
+    "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverSettings, Sungero.NoCode.Settings.Interfaces",
+    "NameGuid": "fb765226-f4ea-4066-b86b-9212d7f3de03",
+    "Header": {
+      "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverHeaderSettings, Sungero.NoCode.Settings.Interfaces",
+      "NameGuid": "a39c105d-eca9-4595-8d18-dbe9bd60acdc",
+      "Name": "CoverHeaderSettings",
+      "LocalizationStrings": [
+        {
+          "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+          "StringCode": "CoverHeaderSettings_Description_a39c105deca945958d18dbe9bd60acdc",
+          "Hash": null,
+          "LocalizationValues": {
+            "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+            "en-US": "The module is intended for administration and configuration of modules",
+            "ru-RU": "Модуль предназначен для загрузки данных в справочники зи таблиц Excel"
+          }
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+          "StringCode": "CoverHeaderSettings_Title_a39c105deca945958d18dbe9bd60acdc",
+          "Hash": null,
+          "LocalizationValues": {
+            "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+            "en-US": "UploadData",
+            "ru-RU": "Загрузка данных"
+          }
+        }
+      ],
+      "IconName": null,
+      "Background": null,
+      "BackgroundPosition": 1
+    },
+    "Footer": {
+      "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFooterSettings, Sungero.NoCode.Settings.Interfaces",
+      "NameGuid": "3bdae08e-61c4-444f-9a58-3e4e90a8b9bd",
+      "Name": "CoverFooterSettings",
+      "LocalizationStrings": [],
+      "IconName": null,
+      "Background": null,
+      "BackgroundPosition": 1
+    },
+    "Tabs": {
+      "$type": "System.Collections.Generic.List`1[[Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverTabSettings, Sungero.NoCode.Settings.Interfaces]], System.Private.CoreLib",
+      "$values": [
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverTabSettings, Sungero.NoCode.Settings.Interfaces",
+          "TabId": "10a6cf62-299e-4852-ab84-7d30dea00aee",
+          "NameGuid": "10a6cf62-299e-4852-ab84-7d30dea00aee",
+          "Name": "Tab",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Tab_Title_10a6cf62299e4852ab847d30dea00aee",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Tab"
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "b9781eb8-c14f-478b-b8b5-6a6b5f7842d4"
+        }
+      ]
+    },
+    "Groups": {
+      "$type": "System.Collections.Generic.List`1[[Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces]], System.Private.CoreLib",
+      "$values": [
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces",
+          "GroupId": "811eb44b-40ee-4f9f-8314-febb17edc0b4",
+          "ColumnNumber": 0,
+          "IconName": "2f5c3b72-2812-4a27-95f2-96b5ee345754.svg",
+          "NameGuid": "811eb44b-40ee-4f9f-8314-febb17edc0b4",
+          "Name": "Classifier",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Classifier_Title_811eb44b40ee4f9f8314febb17edc0b4",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Classifier",
+                "ru-RU": "Классификатор обращений"
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "10a6cf62-299e-4852-ab84-7d30dea00aee"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces",
+          "GroupId": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+          "ColumnNumber": 1,
+          "IconName": "709596e9-25dd-4372-a29d-66225722d73a.svg",
+          "NameGuid": "231af21d-79c7-4c9d-ab5c-da34511778f4",
+          "Name": "OrganizationalStructure",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "OrganizationalStructure_Title_231af21d79c74c9dab5cda34511778f4",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Corporate Structure",
+                "ru-RU": "Организационная структура"
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "10a6cf62-299e-4852-ab84-7d30dea00aee"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces",
+          "GroupId": "d8a51d56-7ce2-4f17-8a1d-38d769b4a0e2",
+          "ColumnNumber": 0,
+          "IconName": "d3b313e6-a1b8-4964-9f75-82f296b1c7e1.svg",
+          "NameGuid": "d8a51d56-7ce2-4f17-8a1d-38d769b4a0e2",
+          "Name": "Cases",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Cases_Title_d8a51d567ce24f178a1d38d769b4a0e2",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Cases",
+                "ru-RU": "Загрузить номенклатуру дел"
+              }
+            }
+          ],
+          "Index": 2,
+          "ParentId": "10a6cf62-299e-4852-ab84-7d30dea00aee"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces",
+          "GroupId": "ac2768ee-d1c8-40d5-b527-910ac91efb4a",
+          "ColumnNumber": 1,
+          "IconName": "00dc266f-9398-4bf3-bf99-0c612bcbac4e.svg",
+          "NameGuid": "ac2768ee-d1c8-40d5-b527-910ac91efb4a",
+          "Name": "GAR",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "GAR_Title_ac2768eed1c840d5b527910ac91efb4a",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Address information",
+                "ru-RU": "Адресная информация"
+              }
+            }
+          ],
+          "Index": 3,
+          "ParentId": "10a6cf62-299e-4852-ab84-7d30dea00aee"
+        }
+      ]
+    },
+    "Actions": {
+      "$type": "System.Collections.Generic.List`1[[Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverActionSettingsBase, Sungero.NoCode.Settings.Interfaces]], System.Private.CoreLib",
+      "$values": [
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadSectionsClassifier",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "6a9e1784-3862-43ae-875f-b72f75c8d427",
+          "NameGuid": "6a9e1784-3862-43ae-875f-b72f75c8d427",
+          "Name": "LoadSections",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadSections_Description_6a9e1784386243ae875fb72f75c8d427",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Sections in classifier",
+                "ru-RU": "Загрузить разделы классификатора обращений"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadSections_Title_6a9e1784386243ae875fb72f75c8d427",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Sections",
+                "ru-RU": "Загрузить разделы"
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "811eb44b-40ee-4f9f-8314-febb17edc0b4"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadThemesClassifier",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "e960c814-02a2-40a8-95d5-ccf41b7552e2",
+          "NameGuid": "e960c814-02a2-40a8-95d5-ccf41b7552e2",
+          "Name": "LoadThemes",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadThemes_Description_e960c81402a240a895d5ccf41b7552e2",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Themes in classifier",
+                "ru-RU": "Загрузить темы классификатора обращений"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadThemes_Title_e960c81402a240a895d5ccf41b7552e2",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Themes",
+                "ru-RU": "Загрузить темы"
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "811eb44b-40ee-4f9f-8314-febb17edc0b4"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadTopicsClassifier",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "37e610fc-87f3-4675-8917-ec8352f35923",
+          "NameGuid": "37e610fc-87f3-4675-8917-ec8352f35923",
+          "Name": "LoadTopics",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadTopics_Description_37e610fc87f346758917ec8352f35923",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Topics in classifier",
+                "ru-RU": "Загрузить тематики классификатора обращений"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadTopics_Title_37e610fc87f346758917ec8352f35923",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Topics",
+                "ru-RU": "Загрузить тематики"
+              }
+            }
+          ],
+          "Index": 2,
+          "ParentId": "811eb44b-40ee-4f9f-8314-febb17edc0b4"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadQuestionsClassifier",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "226d41a3-4d97-445a-a53c-943c45938346",
+          "NameGuid": "226d41a3-4d97-445a-a53c-943c45938346",
+          "Name": "LoadQuestions",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadQuestions_Description_226d41a34d97445aa53c943c45938346",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Questions in classifier",
+                "ru-RU": "Загрузить вопросы классификатора обращений"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadQuestions_Title_226d41a34d97445aa53c943c45938346",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Questions",
+                "ru-RU": "Загрузить вопросы"
+              }
+            }
+          ],
+          "Index": 3,
+          "ParentId": "811eb44b-40ee-4f9f-8314-febb17edc0b4"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadSubQuestionsClassifier",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "63e71bcf-1deb-460c-9874-5a7732cf9a4a",
+          "NameGuid": "63e71bcf-1deb-460c-9874-5a7732cf9a4a",
+          "Name": "LoadSubquestions",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadSubquestions_Description_63e71bcf1deb460c98745a7732cf9a4a",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Subquestions in classifier",
+                "ru-RU": "Загрузить подвопросы классификатора обращений"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadSubquestions_Title_63e71bcf1deb460c98745a7732cf9a4a",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Subquestions",
+                "ru-RU": "Загрузить подвопросы"
+              }
+            }
+          ],
+          "Index": 4,
+          "ParentId": "811eb44b-40ee-4f9f-8314-febb17edc0b4"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadLogins",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "0cbe3a4b-23fb-499b-a138-9de3990dba8a",
+          "NameGuid": "0cbe3a4b-23fb-499b-a138-9de3990dba8a",
+          "Name": "LoadLogin",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadLogin_Description_0cbe3a4b23fb499ba1389de3990dba8a",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Login from organizational structure",
+                "ru-RU": "Загрузить учетные записи из организационной структуры"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadLogin_Title_0cbe3a4b23fb499ba1389de3990dba8a",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Login",
+                "ru-RU": "Загрузить учетные записи"
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "231af21d-79c7-4c9d-ab5c-da34511778f4"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadPersons",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "fe25fd20-d46a-47c9-a02c-ede55585b27e",
+          "NameGuid": "fe25fd20-d46a-47c9-a02c-ede55585b27e",
+          "Name": "LoadPerson",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadPerson_Description_fe25fd20d46a47c9a02cede55585b27e",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Person from organizational structure ",
+                "ru-RU": "Загрузить персоны из организационной структуры"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadPerson_Title_fe25fd20d46a47c9a02cede55585b27e",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Persons",
+                "ru-RU": "Загрузить персоны"
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "231af21d-79c7-4c9d-ab5c-da34511778f4"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadCompanies",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "d7b7e8cc-39e3-44e9-8073-b277b97687bf",
+          "NameGuid": "d7b7e8cc-39e3-44e9-8073-b277b97687bf",
+          "Name": "LoadCompanies",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadCompanies_Description_d7b7e8cc39e344e98073b277b97687bf",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Companies  from organizational structure",
+                "ru-RU": "Загрузить организации из организационной структуры"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadCompanies_Title_d7b7e8cc39e344e98073b277b97687bf",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Companies",
+                "ru-RU": "Загрузить организации"
+              }
+            }
+          ],
+          "Index": 2,
+          "ParentId": "231af21d-79c7-4c9d-ab5c-da34511778f4"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadBusinessUnits",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "cb08b7c7-d6e8-43d6-a7f2-518f673bee5e",
+          "NameGuid": "cb08b7c7-d6e8-43d6-a7f2-518f673bee5e",
+          "Name": "LoadBusinessUnit",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadBusinessUnit_Description_cb08b7c7d6e843d6a7f2518f673bee5e",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Business Unit from organizational structure ",
+                "ru-RU": "Загрузить наши организации из организационной структуры"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadBusinessUnit_Title_cb08b7c7d6e843d6a7f2518f673bee5e",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Business Unit",
+                "ru-RU": "Загрузить наши организации"
+              }
+            }
+          ],
+          "Index": 3,
+          "ParentId": "231af21d-79c7-4c9d-ab5c-da34511778f4"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadDepartments",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "0e1657cf-ec3b-4e25-92ec-2924d5349d5d",
+          "NameGuid": "0e1657cf-ec3b-4e25-92ec-2924d5349d5d",
+          "Name": "LoadDeparrtment",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadDeparrtment_Description_0e1657cfec3b4e2592ec2924d5349d5d",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Deparrtments from organizational structure",
+                "ru-RU": "Загрузить подразделения из организационной структуры"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadDeparrtment_Title_0e1657cfec3b4e2592ec2924d5349d5d",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Deparrtments",
+                "ru-RU": "Загрузить подразделения"
+              }
+            }
+          ],
+          "Index": 4,
+          "ParentId": "231af21d-79c7-4c9d-ab5c-da34511778f4"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadJobTitles",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "7d3a4ee4-ae1c-4c6c-a2c4-017581d3ad0f",
+          "NameGuid": "7d3a4ee4-ae1c-4c6c-a2c4-017581d3ad0f",
+          "Name": "LoadJobTitle",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadJobTitle_Description_7d3a4ee4ae1c4c6ca2c4017581d3ad0f",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Job Titles from organizational structure",
+                "ru-RU": "Загрузить должности из организационной структуры"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadJobTitle_Title_7d3a4ee4ae1c4c6ca2c4017581d3ad0f",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Job Titles",
+                "ru-RU": "Загрузить должности"
+              }
+            }
+          ],
+          "Index": 5,
+          "ParentId": "231af21d-79c7-4c9d-ab5c-da34511778f4"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadEmployees",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "54f2cdc4-718c-47fa-a289-0c2ab17e1a93",
+          "NameGuid": "54f2cdc4-718c-47fa-a289-0c2ab17e1a93",
+          "Name": "LoadEmployee",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadEmployee_Description_54f2cdc4718c47faa2890c2ab17e1a93",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Employees from organizational structure ",
+                "ru-RU": "Загрузить работников из организационной структуры"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadEmployee_Title_54f2cdc4718c47faa2890c2ab17e1a93",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Employees",
+                "ru-RU": "Загрузить работников"
+              }
+            }
+          ],
+          "Index": 6,
+          "ParentId": "231af21d-79c7-4c9d-ab5c-da34511778f4"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadFileRetentionPeriod",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "2cb9f01a-f480-4b98-973d-cf5e63452470",
+          "NameGuid": "2cb9f01a-f480-4b98-973d-cf5e63452470",
+          "Name": "LoadRetentionPeriod",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadRetentionPeriod_Description_2cb9f01af4804b98973dcf5e63452470",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load retention periods from file",
+                "ru-RU": "Загрузить сроки хранения из файла"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadRetentionPeriod_Title_2cb9f01af4804b98973dcf5e63452470",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load retention periods",
+                "ru-RU": "Загрузить сроки хранения"
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "d8a51d56-7ce2-4f17-8a1d-38d769b4a0e2"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadCaseFile",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "99c2aa21-1787-4f49-a678-d573503a62a6",
+          "NameGuid": "99c2aa21-1787-4f49-a678-d573503a62a6",
+          "Name": "LoadCase",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadCase_Description_99c2aa2117874f49a678d573503a62a6",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load case from file",
+                "ru-RU": "Загрузить номенклатуру дел из файла"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadCase_Title_99c2aa2117874f49a678d573503a62a6",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load case",
+                "ru-RU": "Загрузить номенклатуру дел"
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "d8a51d56-7ce2-4f17-8a1d-38d769b4a0e2"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadCities",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "19206979-73e2-4bec-b403-617eea06c547",
+          "NameGuid": "19206979-73e2-4bec-b403-617eea06c547",
+          "Name": "LoadCities",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadCities_Description_1920697973e24becb403617eea06c547",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Download settlements",
+                "ru-RU": "Загрузить населенные пункты из ФИАС (ГАР)"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadCities_Title_1920697973e24becb403617eea06c547",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load Cities",
+                "ru-RU": "Загрузить населенные пункты"
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "ac2768ee-d1c8-40d5-b527-910ac91efb4a"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadMunicipalAreas",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "e50c13b2-16b9-4765-8976-017135af4212",
+          "NameGuid": "e50c13b2-16b9-4765-8976-017135af4212",
+          "Name": "LoadMunicipalAreas",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadMunicipalAreas_Description_e50c13b216b947658976017135af4212",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load municipal areas",
+                "ru-RU": "Загрузить муниципальные районы из ФИАС (ГАР)"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadMunicipalAreas_Title_e50c13b216b947658976017135af4212",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load municipal areas",
+                "ru-RU": "Загрузить муниципальные районы"
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "ac2768ee-d1c8-40d5-b527-910ac91efb4a"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "LoadSettlements",
+          "FunctionModuleId": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+          "ActionId": "06baba68-36a5-41b2-825d-f16481385726",
+          "NameGuid": "06baba68-36a5-41b2-825d-f16481385726",
+          "Name": "LoadSettlement",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadSettlement_Description_06baba6836a541b2825df16481385726",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load settlement",
+                "ru-RU": "Загрузить поселения из ФИАС (ГАР)"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "LoadSettlement_Title_06baba6836a541b2825df16481385726",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Load settlement",
+                "ru-RU": "Загрузить поселения"
+              }
+            }
+          ],
+          "Index": 2,
+          "ParentId": "ac2768ee-d1c8-40d5-b527-910ac91efb4a"
+        }
+      ]
+    },
+    "RemoteControls": {
+      "$type": "System.Collections.Generic.List`1[[Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverRemoteControlSettings, Sungero.NoCode.Settings.Interfaces]], System.Private.CoreLib",
+      "$values": []
+    },
+    "Background": null,
+    "BackgroundPosition": 1
+  },
+  "Priority": 1,
+  "ExplorerModule": {
+    "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+    "TypeGuid": "4cbdfb03-5462-43c4-a033-034e3d3aa095",
+    "Identifier": "5a9fb16f-f1a3-4965-8492-5a853351161b"
+  },
+  "Items": {
+    "$type": "Sungero.DataExport.ExportingObject[], Sungero.DataExport",
+    "$values": [
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "9c9b0867-4473-4092-8e6c-6948d9bf97a7",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "de9bec59-b71e-466f-bac8-1799d3a0c079"
+        },
+        "Number": 1,
+        "ItemType": "EntityType",
+        "NameGuid": "6f93b648-9a9c-4315-bdd8-b4d0e77cbaab"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "1b7c1a3c-163b-4cd8-82e2-b48780d5ac5f",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "de9bec59-b71e-466f-bac8-1799d3a0c079"
+        },
+        "Number": 2,
+        "ItemType": "EntityType",
+        "NameGuid": "374fabab-e508-457c-9249-9206dcf46432"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "883195f4-bf6e-4d99-a5dc-6c1939c632d5",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "de9bec59-b71e-466f-bac8-1799d3a0c079"
+        },
+        "Number": 3,
+        "ItemType": "EntityType",
+        "NameGuid": "c0df38db-2c1a-4dd7-9750-811b325dc946"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "b18041b7-66d5-4c7f-ad1f-7adcb5b0db36",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "de9bec59-b71e-466f-bac8-1799d3a0c079"
+        },
+        "Number": 4,
+        "ItemType": "EntityType",
+        "NameGuid": "f3f39dd1-e103-4474-9cdf-7e68cf383cb7"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "983fe6fb-533a-42d0-8f2a-0362ed641b17",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "de9bec59-b71e-466f-bac8-1799d3a0c079"
+        },
+        "Number": 5,
+        "ItemType": "EntityType",
+        "NameGuid": "fb18228d-e23c-4076-a82a-bbf8ec571a4e"
+      }
+    ]
+  },
+  "Recipients": {
+    "$type": "Sungero.DataExport.ExportingObject[], Sungero.DataExport",
+    "$values": [
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "f179a53b-5323-4daa-816e-36446ee8ac57",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "de9bec59-b71e-466f-bac8-1799d3a0c079"
+        },
+        "Recipient": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "5e9b55c2-c1f5-4e4f-aa09-7b6d461d87ed",
+          "Identifier": "ba88ed21-a43c-4684-be90-99c5a22e5c90"
+        }
+      }
+    ]
+  },
+  "Uuid": "de9bec59-b71e-466f-bac8-1799d3a0c079",
+  "ModuleNameGuid": "5a9fb16f-f1a3-4965-8492-5a853351161b",
+  "StoreAsDefaultSetting": true,
+  "Status": "Active"
+}
